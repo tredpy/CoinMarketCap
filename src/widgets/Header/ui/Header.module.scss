@@ -1,0 +1,19 @@
+.Header {
+    height: var(--header-height);
+    background: var(--inverted-bg-color);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.links {
+    margin-left: auto;
+}
+
+.profile {
+    margin-left: 20px;
+}
+
+.profile:first-child {
+    margin-left: 0;
+}
