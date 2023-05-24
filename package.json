@@ -23,6 +23,8 @@
     "eslint-plugin-react": "^7.32.2",
     "stylelint": "^15.6.2",
     "stylelint-config-standard-scss": "^9.0.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
   }
 }
