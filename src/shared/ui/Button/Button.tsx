@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { ButtonHTMLAttributes, FC } from 'react';
 import s from './Button.module.scss';
 
-export type ButtonView = 'clear'
+export type ButtonView = 'clear' | 'border' | 'background'
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string
     view?: ButtonView

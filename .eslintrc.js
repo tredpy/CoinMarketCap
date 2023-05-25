@@ -31,6 +31,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/prefer-ts-expect-error': 'off',
-    '@typescript-eslint/no-confusing-void-expression': 'off'
+    '@typescript-eslint/no-confusing-void-expression': 'off',
+    '@typescript-eslint/naming-convention': 'off'
   },
 };
