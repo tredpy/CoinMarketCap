@@ -8,14 +8,28 @@
 
 .links {
     margin-left: auto;
-    display: flex;
-    align-items: center;
+    padding-left: 20px;
 }
 
-.menu {
+.link {
     margin-left: 20px;
 }
 
-.menu:first-child {
+.link:first-child {
+    margin-left: 0;
+}
+
+.menu {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.item {
+    margin-left: 20px;
+}
+
+.item:first-child {
     margin-left: 0;
 }

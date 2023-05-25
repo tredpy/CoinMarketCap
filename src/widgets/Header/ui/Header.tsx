@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { LangSwitcher } from 'features/LangSwitcher';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { Button } from 'shared/ui/Button/Button';
-import DarkIcon from 'shared/assets/icons/DarkTheme.svg';
+import { RoutePath } from 'shared/config/routes/routes';
 import s from './Header.module.scss';
 
 interface HeaderProps {
@@ -16,34 +16,34 @@ export const Header = ({ className }: HeaderProps) => {
     return (
         <div className={classNames(s.Header, {}, [className])}>
             <div>
-                <DarkIcon/>
+                LOGO
             </div>
             <div className={s.links}>
-                <AppLink view={'primary'} to="/" className={s.menu}>
+                <AppLink view={'primary'} to={RoutePath.MAIN} className={s.link}>
                     {t('Криптовалюты')}
                 </AppLink>
-                <AppLink view={'primary'} to="/profile" className={s.menu}>
+                <AppLink view={'primary'} to={RoutePath.PROFILE} className={s.link}>
                     {t('Профиль')}
                 </AppLink>
-                <AppLink view={'primary'} to="/portfolio" className={s.menu}>
+                <AppLink view={'primary'} to={RoutePath.PORTFOLIO} className={s.link}>
                     {t('Портфель')}
                 </AppLink>
-                <AppLink view={'primary'} to="/watchlist" className={s.menu}>
+                <AppLink view={'primary'} to={RoutePath.WATCHLIST} className={s.link}>
                     {t('Избранное')}
                 </AppLink>
             </div>
-            <div className={s.links}>
-                <ThemeSwitcher className={s.menu}/>
-                <LangSwitcher className={s.menu}/>
+            <div className={s.menu}>
+                <ThemeSwitcher className={s.item}/>
+                <LangSwitcher className={s.item}/>
                 <Button
                     view={'border'}
-                    className={s.menu}
+                    className={s.item}
                 >
                     {t('Вход')}
                 </Button>
                 <Button
                     view={'background'}
-                    className={s.menu}
+                    className={s.item}
                 >
                     {t('Зарегестрироваться')}
                 </Button>
