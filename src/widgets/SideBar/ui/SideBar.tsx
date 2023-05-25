@@ -22,6 +22,7 @@ export const SideBar = ({ className }: SideBarProps) => {
             <Button
                 view={'clear'}
                 onClick={onToggle}
+                className={s.collapseBtn}
             >
                 {theme === 'dark' ? <HideLight /> : <HideDark />}
             </Button>

@@ -1,4 +1,5 @@
 .Button {
+    font: var(--font-m);
     cursor: pointer;
     color: var(--inverted-primary-color);
 }
@@ -11,7 +12,7 @@
 }
 
 .border {
-    padding: 5px 10px;
+    padding: 2px 5px;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     background: none;
@@ -19,7 +20,7 @@
 
 .background {
     color: var(--bg-dark);
-    padding: 5px 10px;
+    padding: 2px 5px;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     background: var(--primary-color);

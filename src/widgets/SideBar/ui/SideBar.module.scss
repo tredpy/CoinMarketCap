@@ -10,14 +10,8 @@
     width: var(--sidebar-width-collapsed);
 }
 
-.switchers {
+.collapseBtn {
     position: absolute;
-    bottom: 30px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.lang {
-    margin-left: 20px;
+    right: -15px;
+    bottom: 40px;
 }

@@ -5,5 +5,8 @@
   "Избранное": "Watchlist",
   "Профиль": "Profile",
   "Зарегестрироваться": "Sign up",
-  "Вход": "Log in"
+  "Вход": "Log in",
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка": "An unexpected error has occurred",
+  "Обновить страницу": "Refresh the page"
 }

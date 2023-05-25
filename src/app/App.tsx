@@ -4,11 +4,16 @@ import { AppRouter } from './providers/AppRouter';
 import { Header } from 'widgets/Header';
 import { SideBar } from 'widgets/SideBar';
 import { PageLoader } from 'widgets/PageLoader';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import './styles/index.scss';
 
 export const App = () => {
     const { theme } = useTheme();
+    useEffect(() => {
+        if (Math.random() < 0.5) {
+            throw new Error()
+        }
+    }, [])
     return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback={<PageLoader /> }>

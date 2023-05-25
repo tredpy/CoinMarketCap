@@ -3,29 +3,35 @@ import { MainPage } from 'pages/MainPage';
 import { ProfilePage } from 'pages/ProfilePage';
 import { PortfolioPage } from 'pages/PortfolioPage';
 import { WatchlistPage } from 'pages/WatchlistPage';
+import { NotFoundPage } from 'pages/NotFoundPage';
 
-export type AppRoutes = 'main' | 'profile' | 'portfolio' | 'watchlist'
+export type AppRoutes = 'MAIN' | 'PROFILE' | 'PORTFOLIO' | 'WATCHLIST' | 'NOT_FOUND'
 export const RoutePath: Record<AppRoutes, string> = {
-    main: '/',
-    profile: '/profile',
-    portfolio: '/portfolio',
-    watchlist: 'watchlist'
+    MAIN: '/',
+    PROFILE: '/profile',
+    PORTFOLIO: '/portfolio',
+    WATCHLIST: '/watchlist',
+    NOT_FOUND: '*'
 };
 export const routeConfig: Record<AppRoutes, RouteProps> = {
-    main: {
-        path: RoutePath.main,
+    MAIN: {
+        path: RoutePath.MAIN,
         element: <MainPage />
     },
-    profile: {
-        path: RoutePath.profile,
+    PROFILE: {
+        path: RoutePath.PROFILE,
         element: <ProfilePage />
     },
-    portfolio: {
-        path: RoutePath.portfolio,
+    PORTFOLIO: {
+        path: RoutePath.PORTFOLIO,
         element: <PortfolioPage />
     },
-    watchlist: {
-        path: RoutePath.watchlist,
+    WATCHLIST: {
+        path: RoutePath.WATCHLIST,
         element: <WatchlistPage />
+    },
+    NOT_FOUND: {
+        path: RoutePath.NOT_FOUND,
+        element: <NotFoundPage />
     }
 };
