@@ -17,9 +17,11 @@ export const SideBar = ({ className }: SideBarProps) => {
     };
     return (
         <div
+            data-testid="SideBar"
             className={classNames(s.SideBar, { [s.collapsed]: collapsed }, [className])}
         >
             <Button
+                data-testid="SideBarCollapseToggle"
                 view={'clear'}
                 onClick={onToggle}
                 className={s.collapseBtn}
