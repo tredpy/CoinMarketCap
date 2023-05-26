@@ -9,6 +9,7 @@ import s from './SideBar.module.scss';
 interface SideBarProps {
     className?: string
 }
+
 export const SideBar = ({ className }: SideBarProps) => {
     const { theme } = useTheme();
     const [collapsed, setCollapsed] = useState(false);
@@ -26,7 +27,7 @@ export const SideBar = ({ className }: SideBarProps) => {
                 onClick={onToggle}
                 className={s.collapseBtn}
             >
-                {theme === 'dark' ? <HideLight /> : <HideDark />}
+                {theme === 'dark' ? <HideLight/> : <HideDark/>}
             </Button>
         </div>
     );

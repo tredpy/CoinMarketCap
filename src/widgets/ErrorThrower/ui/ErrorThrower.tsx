@@ -6,6 +6,7 @@ import s from './ErrorThrower.module.scss';
 interface ErrorThrowerProps {
     className?: string
 }
+
 export const ErrorThrower = ({ className }: ErrorThrowerProps) => {
     const { t } = useTranslation();
     const reloadPage = () => {

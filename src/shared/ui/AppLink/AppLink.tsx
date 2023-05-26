@@ -4,10 +4,12 @@ import { FC } from 'react';
 import s from './AppLink.module.scss';
 
 export type AppLinkView = 'primary'
+
 interface AppLinkProps extends LinkProps {
     className?: string
     view?: AppLinkView
 }
+
 export const AppLink: FC<AppLinkProps> = (props) => {
     const {
         to,

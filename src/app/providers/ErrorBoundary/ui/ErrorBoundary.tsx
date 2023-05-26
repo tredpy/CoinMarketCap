@@ -4,9 +4,11 @@ import { ErrorThrower } from 'widgets/ErrorThrower';
 interface ErrorBoundaryProps {
     children: ReactNode
 }
+
 interface ErrorBoundaryState {
     hasError: boolean
 }
+
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
     constructor (props: ErrorBoundaryProps) {
         super(props);
@@ -27,7 +29,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
         if (hasError) {
             return (
                 <Suspense fallback="">
-                    <ErrorThrower />
+                    <ErrorThrower/>
                 </Suspense>
             );
         }

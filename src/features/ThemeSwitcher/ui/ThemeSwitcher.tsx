@@ -7,6 +7,7 @@ import LightIcon from 'shared/assets/icons/LIGHT.svg';
 interface ThemeSwitcherProps {
     className?: string
 }
+
 export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
     const { theme, toggleTheme } = useTheme();
     return (
@@ -15,7 +16,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
             className={classNames('', {}, [className])}
             onClick={toggleTheme}
         >
-            {theme === 'dark' ? <LightIcon /> : <DarkIcon /> }
+            {theme === 'dark' ? <LightIcon/> : <DarkIcon/>}
         </Button>
     );
 };

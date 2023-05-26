@@ -9,22 +9,22 @@ import { NotFoundPage } from 'pages/NotFoundPage';
 export const routeConfig: Record<AppRoutes, RouteProps> = {
     MAIN: {
         path: RoutePath.MAIN,
-        element: <MainPage />
+        element: <MainPage/>
     },
     PROFILE: {
         path: RoutePath.PROFILE,
-        element: <ProfilePage />
+        element: <ProfilePage/>
     },
     PORTFOLIO: {
         path: RoutePath.PORTFOLIO,
-        element: <PortfolioPage />
+        element: <PortfolioPage/>
     },
     WATCHLIST: {
         path: RoutePath.WATCHLIST,
-        element: <WatchlistPage />
+        element: <WatchlistPage/>
     },
     NOT_FOUND: {
         path: RoutePath.NOT_FOUND,
-        element: <NotFoundPage />
+        element: <NotFoundPage/>
     }
 };

@@ -15,9 +15,9 @@ export const Header = ({ className }: HeaderProps) => {
     const { t } = useTranslation();
     return (
         <div className={classNames(s.Header, {}, [className])}>
-            <div>
+            <Button view={'clear'}>
                 LOGO
-            </div>
+            </Button>
             <div className={s.links}>
                 <AppLink view={'primary'} to={RoutePath.MAIN} className={s.link}>
                     {t('Криптовалюты')}
@@ -45,7 +45,7 @@ export const Header = ({ className }: HeaderProps) => {
                     view={'background'}
                     className={s.item}
                 >
-                    {t('Зарегестрироваться')}
+                    {t('Регистрация')}
                 </Button>
             </div>
         </div>

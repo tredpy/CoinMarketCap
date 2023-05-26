@@ -3,10 +3,12 @@ import { ButtonHTMLAttributes, FC } from 'react';
 import s from './Button.module.scss';
 
 export type ButtonView = 'clear' | 'border' | 'background'
+
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string
     view?: ButtonView
 }
+
 export const Button: FC<ButtonProps> = (props) => {
     const {
         className,

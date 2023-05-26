@@ -10,13 +10,13 @@ import './styles/index.scss';
 export const App = () => {
     const { theme } = useTheme();
     useEffect(() => {
-        if (Math.random() < 0.5) {
+        if (Math.random() < 0.3) {
             throw new Error()
         }
     }, [])
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback={<PageLoader /> }>
+            <Suspense fallback={<PageLoader/>}>
                 <Header/>
                 <div className='wrapper'>
                     <SideBar/>

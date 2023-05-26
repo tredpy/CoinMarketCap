@@ -6,12 +6,12 @@ import { SideBar } from './SideBar';
 
 describe('SideBar', () => {
     test('Render test', () => {
-        renderWithTranslation(<SideBar />);
+        renderWithTranslation(<SideBar/>);
         expect(screen.getByTestId('SideBar')).toBeInTheDocument();
     });
 
     test('With collapsed class', () => {
-        renderWithTranslation(<SideBar />);
+        renderWithTranslation(<SideBar/>);
         const toggleBtn = screen.getByTestId('SideBarCollapseToggle');
         expect(screen.getByTestId('SideBar')).toBeInTheDocument();
         fireEvent.click(toggleBtn);
