@@ -12,4 +12,16 @@ describe('Button', () => {
         expect(screen.getByText('TEST')).toHaveClass('clear');
         screen.debug();
     });
+
+    test('With view border', () => {
+        render(<Button view={'border'}>TEST</Button>);
+        expect(screen.getByText('TEST')).toHaveClass('border');
+        screen.debug();
+    });
+
+    test('With view background', () => {
+        render(<Button view={'background'}>TEST</Button>);
+        expect(screen.getByText('TEST')).toHaveClass('background');
+        screen.debug();
+    });
 });
