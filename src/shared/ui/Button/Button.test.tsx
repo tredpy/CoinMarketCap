@@ -4,18 +4,23 @@ import { Button } from './Button';
 describe('Button', () => {
     test('Render test', () => {
         render(<Button>TEST</Button>);
+        expect(screen.getByTestId('Button')).toBeInTheDocument();
+    });
+
+    test('With text', () => {
+        render(<Button>TEST</Button>);
         expect(screen.getByText('TEST')).toBeInTheDocument();
     });
 
-    test('With size m', () => {
-        render(<Button size={'m'}>TEST</Button>);
-        expect(screen.getByText('TEST')).toHaveClass('m');
+    test('With size M', () => {
+        render(<Button size={'M'}>TEST</Button>);
+        expect(screen.getByText('TEST')).toHaveClass('M');
         screen.debug();
     });
 
-    test('With size l', () => {
-        render(<Button size={'l'}>TEST</Button>);
-        expect(screen.getByText('TEST')).toHaveClass('l');
+    test('With size L', () => {
+        render(<Button size={'L'}>TEST</Button>);
+        expect(screen.getByText('TEST')).toHaveClass('L');
         screen.debug();
     });
 

@@ -14,8 +14,11 @@ interface HeaderProps {
 export const Header = ({ className }: HeaderProps) => {
     const { t } = useTranslation();
     return (
-        <div className={classNames(s.Header, {}, [className])}>
-            <Button view={'clear'} size={'l'}>
+        <div
+            data-testid="Header"
+            className={classNames(s.Header, {}, [className])}
+        >
+            <Button view={'clear'} size={'L'}>
                 CoinMarketCap
             </Button>
             <div className={s.links}>
@@ -37,14 +40,14 @@ export const Header = ({ className }: HeaderProps) => {
                 <LangSwitcher className={s.item}/>
                 <Button
                     view={'border'}
-                    size={'m'}
+                    size={'M'}
                     className={s.item}
                 >
                     {t('Вход')}
                 </Button>
                 <Button
                     view={'background'}
-                    size={'m'}
+                    size={'M'}
                     className={s.item}
                 >
                     {t('Регистрация')}

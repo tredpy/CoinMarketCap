@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
 import {
-    renderWithTranslation
-} from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
+    componentRender
+} from 'shared/lib/testsHelpers/componentRender';
 import PortfolioPage from './PortfolioPage';
 
 describe('PortfolioPage', () => {
     test('Render test', () => {
-        renderWithTranslation(<PortfolioPage/>);
+        componentRender(<PortfolioPage/>);
         expect(screen.getByTestId('PortfolioPage')).toBeInTheDocument();
     });
 });

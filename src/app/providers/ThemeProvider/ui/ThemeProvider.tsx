@@ -3,7 +3,7 @@ import {
     LOCAL_STORAGE_THEME_KEY,
     Theme,
     ThemeContext
-} from 'shared/config/ThemeContext/ThemeContext';
+} from 'shared/config/themeContext/themeContext';
 
 interface ThemeProviderProps {
     children: ReactNode

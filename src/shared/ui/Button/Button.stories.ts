@@ -16,14 +16,14 @@ type Story = StoryObj<typeof meta>;
 export const SizeM: Story = {
     args: {
         children: 'Button',
-        size: 'm'
+        size: 'M'
     }
 };
 
 export const SizeL: Story = {
     args: {
         children: 'Button',
-        size: 'l'
+        size: 'L'
     }
 };
 

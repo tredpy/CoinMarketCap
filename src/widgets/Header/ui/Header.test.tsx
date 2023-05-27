@@ -2,11 +2,11 @@ import { screen } from '@testing-library/react';
 import {
     componentRender
 } from 'shared/lib/testsHelpers/componentRender';
-import MainPage from './MainPage';
+import { Header } from './Header';
 
-describe('MainPage', () => {
+describe('Header', () => {
     test('Render test', () => {
-        componentRender(<MainPage/>);
-        expect(screen.getByTestId('MainPage')).toBeInTheDocument();
+        componentRender(<Header/>);
+        expect(screen.getByTestId('Header')).toBeInTheDocument();
     });
 });

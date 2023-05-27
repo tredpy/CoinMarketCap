@@ -14,7 +14,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
         <Button
             data-testid="ThemeSwitcher"
             view={'clear'}
-            size={'m'}
+            size={'M'}
             className={classNames('', {}, [className])}
             onClick={toggleTheme}
         >

@@ -16,7 +16,7 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
             data-testid="LangSwitcher"
             className={classNames('', {}, [className])}
             view={'clear'}
-            size={'m'}
+            size={'M'}
             onClick={toggleLang}
         >
             {t('Русский')}

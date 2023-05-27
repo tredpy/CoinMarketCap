@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
 import {
-    renderWithTranslation
-} from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
+    componentRender
+} from 'shared/lib/testsHelpers/componentRender';
 import { ErrorThrower } from './ErrorThrower';
 
 describe('ErrorThrower', () => {
     test('Render test', () => {
-        renderWithTranslation(<ErrorThrower/>);
+        componentRender(<ErrorThrower/>);
         expect(screen.getByTestId('ErrorThrower')).toBeInTheDocument();
     });
 });
