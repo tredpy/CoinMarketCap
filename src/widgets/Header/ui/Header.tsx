@@ -15,8 +15,8 @@ export const Header = ({ className }: HeaderProps) => {
     const { t } = useTranslation();
     return (
         <div className={classNames(s.Header, {}, [className])}>
-            <Button view={'clear'}>
-                LOGO
+            <Button view={'clear'} size={'l'}>
+                CoinMarketCap
             </Button>
             <div className={s.links}>
                 <AppLink view={'primary'} to={RoutePath.MAIN} className={s.link}>
@@ -37,12 +37,14 @@ export const Header = ({ className }: HeaderProps) => {
                 <LangSwitcher className={s.item}/>
                 <Button
                     view={'border'}
+                    size={'m'}
                     className={s.item}
                 >
                     {t('Вход')}
                 </Button>
                 <Button
                     view={'background'}
+                    size={'m'}
                     className={s.item}
                 >
                     {t('Регистрация')}

@@ -24,6 +24,7 @@ export const SideBar = ({ className }: SideBarProps) => {
             <Button
                 data-testid="SideBarCollapseToggle"
                 view={'clear'}
+                size={'m'}
                 onClick={onToggle}
                 className={s.collapseBtn}
             >

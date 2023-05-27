@@ -13,6 +13,20 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+export const SizeM: Story = {
+    args: {
+        children: 'Button',
+        size: 'm'
+    }
+};
+
+export const SizeL: Story = {
+    args: {
+        children: 'Button',
+        size: 'l'
+    }
+};
+
 export const Clear: Story = {
     args: {
         children: 'Button',
