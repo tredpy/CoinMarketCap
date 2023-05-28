@@ -1,4 +1,5 @@
 import React, { ErrorInfo, ReactNode, Suspense } from 'react';
+
 import { ErrorThrower } from 'widgets/ErrorThrower';
 import { PageLoader } from 'widgets/PageLoader';
 

@@ -1,4 +1,4 @@
-name: Node.js CI linting, testing, building
+name: Node.js CI pipeline. Linting, Testing, Building
 on:
   push:
     branches: [ master ]

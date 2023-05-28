@@ -1,10 +1,14 @@
+import { Suspense, useEffect } from 'react';
+
+import { AppRouter } from './providers/AppRouter';
+
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'shared/lib/useTheme/useTheme';
-import { AppRouter } from './providers/AppRouter';
+
 import { Header } from 'widgets/Header';
 import { SideBar } from 'widgets/SideBar';
 import { PageLoader } from 'widgets/PageLoader';
-import { Suspense, useEffect } from 'react';
+
 import './styles/index.scss';
 
 export const App = () => {
@@ -14,6 +18,7 @@ export const App = () => {
             throw new Error()
         }
     }, [])
+
     return (
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback={<PageLoader/>}>

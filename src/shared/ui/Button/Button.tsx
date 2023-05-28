@@ -1,5 +1,7 @@
-import { classNames } from 'shared/lib/classNames/classNames';
 import { ButtonHTMLAttributes, FC } from 'react';
+
+import { classNames } from 'shared/lib/classNames/classNames';
+
 import s from './Button.module.scss';
 
 export type ButtonView = 'clear' | 'border' | 'background'
@@ -19,6 +21,7 @@ export const Button: FC<ButtonProps> = (props) => {
         size,
         ...otherProps
     } = props;
+
     return (
         <button
             data-testid="Button"

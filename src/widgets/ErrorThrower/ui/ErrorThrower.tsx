@@ -1,7 +1,9 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button/Button';
 import { useTheme } from 'shared/lib/useTheme/useTheme';
+
+import { useTranslation } from 'react-i18next';
+
 import s from './ErrorThrower.module.scss';
 
 interface ErrorThrowerProps {
@@ -14,6 +16,7 @@ export const ErrorThrower = ({ className }: ErrorThrowerProps) => {
     const reloadPage = () => {
         window.location.reload();
     };
+
     return (
         <div
             data-testid="ErrorThrower"

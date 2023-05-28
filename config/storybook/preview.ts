@@ -1,4 +1,5 @@
-import type { Preview } from '@storybook/react';
+import { Preview } from '@storybook/react';
+
 import { StyleDecorator } from 'shared/config/storybook/StyleDecorator/StyleDecorator';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { RouteDecorator } from 'shared/config/storybook/RouteDecorator/RouteDecorator';

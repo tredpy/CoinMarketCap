@@ -1,7 +1,9 @@
 import { screen } from '@testing-library/react';
+
 import {
     componentRender
 } from 'shared/lib/testsHelpers/componentRender';
+
 import { Header } from './Header';
 
 describe('Header', () => {

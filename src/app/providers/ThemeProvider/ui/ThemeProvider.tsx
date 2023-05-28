@@ -1,4 +1,5 @@
 import { ReactNode, useMemo, useState } from 'react';
+
 import {
     LOCAL_STORAGE_THEME_KEY,
     Theme,
@@ -16,10 +17,12 @@ const ThemeProvider = ({ children }: ThemeProviderProps) => {
         theme,
         setTheme
     }), [theme]);
+
     return (
         <ThemeContext.Provider value={defaultProps}>
             {children}
         </ThemeContext.Provider>
     );
 };
+
 export default ThemeProvider;

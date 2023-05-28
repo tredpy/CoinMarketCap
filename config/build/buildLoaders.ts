@@ -1,5 +1,7 @@
 import webpack from 'webpack';
+
 import { BuildOptions } from './types/config';
+
 import { buildSvgLoader } from './loaders/buildSvgLoader';
 import { buildCssLoader } from './loaders/buildCssLoader';
 
@@ -11,6 +13,7 @@ export function buildLoaders ({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         use: 'ts-loader',
         exclude: /node_modules/
     }
+
     return [
         svgLoader,
         typescriptLoader,
