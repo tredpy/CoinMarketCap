@@ -9,7 +9,11 @@ module.exports = {
             version: 'detect'
         }
     },
-    extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:storybook/recommended'],
+    extends: [
+        'plugin:react/recommended',
+        'standard-with-typescript',
+        'plugin:storybook/recommended'
+    ],
     overrides: [],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -17,8 +21,13 @@ module.exports = {
         sourceType: 'module',
         project: ['./tsconfig.json']
     },
-    plugins: ['react'],
+    plugins: [
+        'react',
+        'react-hooks'
+    ],
     rules: {
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
         'react/react-in-jsx-scope': 'off',
         'react/display-name': 'off',
         '@typescript-eslint/indent': 'off',

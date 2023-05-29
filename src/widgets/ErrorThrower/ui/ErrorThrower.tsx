@@ -1,6 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
-import { useTheme } from 'shared/lib/useTheme/useTheme';
 
 import { useTranslation } from 'react-i18next';
 
@@ -11,7 +10,6 @@ interface ErrorThrowerProps {
 }
 
 export const ErrorThrower = ({ className }: ErrorThrowerProps) => {
-    const { theme } = useTheme();
     const { t } = useTranslation();
     const reloadPage = () => {
         window.location.reload();
@@ -20,7 +18,7 @@ export const ErrorThrower = ({ className }: ErrorThrowerProps) => {
     return (
         <div
             data-testid="ErrorThrower"
-            className={classNames(s.ErrorThrower, {}, [className, theme])}
+            className={classNames(s.ErrorThrower, {}, [className])}
         >
             <p className={s.title}>{t('Произошла непредвиденная ошибка')}</p>
             <Button

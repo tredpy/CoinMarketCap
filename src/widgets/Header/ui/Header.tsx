@@ -1,9 +1,12 @@
+import { useCallback, useState } from 'react';
+
 import { LangSwitcher } from 'features/LangSwitcher';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Button } from 'shared/ui/Button/Button';
+import { Modal } from 'shared/ui/Modal/Modal';
 import { RoutePath } from 'shared/config/routes/routes';
 
 import { useTranslation } from 'react-i18next';
@@ -16,6 +19,12 @@ interface HeaderProps {
 
 export const Header = ({ className }: HeaderProps) => {
     const { t } = useTranslation();
+
+    const [isAuthModal, setIsAuthModal] = useState(false);
+
+    const onToggleModal = useCallback(() => {
+        setIsAuthModal((prev) => !prev);
+    }, []);
 
     return (
         <div
@@ -57,6 +66,16 @@ export const Header = ({ className }: HeaderProps) => {
             <div className={s.menu}>
                 <ThemeSwitcher className={s.item}/>
                 <LangSwitcher className={s.item}/>
+                <Button
+                    view={'background'}
+                    onClick={onToggleModal}
+                    className={s.item}
+                >
+                    X
+                </Button>
+                <Modal isOpen={isAuthModal} onClose={onToggleModal}>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam
+                </Modal>
                 <Button
                     view={'border'}
                     size={'M'}
