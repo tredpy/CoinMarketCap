@@ -76,7 +76,7 @@ export const Header = ({ className }: HeaderProps) => {
                     X
                 </Button>
                 <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                    <Counter />
+                    <Counter/>
                 </Modal>
                 <Button
                     view={'border'}

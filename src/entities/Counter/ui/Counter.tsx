@@ -14,6 +14,7 @@ export const Counter = () => {
     const decr = () => {
         dispatch(counterActions.decrement())
     }
+
     return (
         <div>
             <h1 data-testid="Value">{counterValue}</h1>
