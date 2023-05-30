@@ -15,15 +15,15 @@ type Story = StoryObj<typeof meta>;
 
 export const Clear: Story = {
     args: {
-    isOpen: true,
-    children: 'Modal Modal Modal Modal Modal Modal Modal Modal '
+        isOpen: true,
+        children: 'Modal Modal Modal Modal Modal Modal Modal Modal '
     }
 };
 
 export const ClearDark: Story = {
     args: {
-    isOpen: true,
-    children: 'Modal Modal Modal Modal Modal Modal Modal Modal '
+        isOpen: true,
+        children: 'Modal Modal Modal Modal Modal Modal Modal Modal '
     },
     decorators: [ThemeDecorator('dark')]
 };
