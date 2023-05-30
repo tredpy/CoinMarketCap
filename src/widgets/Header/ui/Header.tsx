@@ -1,5 +1,7 @@
 import { useCallback, useState } from 'react';
 
+import { Counter } from 'entities/Counter';
+
 import { LangSwitcher } from 'features/LangSwitcher';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 
@@ -74,7 +76,7 @@ export const Header = ({ className }: HeaderProps) => {
                     X
                 </Button>
                 <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam
+                    <Counter />
                 </Modal>
                 <Button
                     view={'border'}

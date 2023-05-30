@@ -29,5 +29,8 @@ export default {
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
     ],
     rootDir: '../../',
-    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts']
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    globals: {
+        __IS_DEV__: true
+    }
 };

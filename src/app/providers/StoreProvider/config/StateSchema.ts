@@ -1,4 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface StateSchema {
+import { CounterSchema } from 'entities/Counter';
 
+export interface StateSchema {
+    counter: CounterSchema
 }
