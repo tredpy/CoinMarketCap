@@ -1,29 +1,28 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Modal } from './Modal';
+import { Input } from './Input';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
 const meta = {
-    title: 'shared/Modal',
-    component: Modal,
+    title: 'shared/Input',
+    component: Input,
     tags: ['autodocs'],
-    argTypes: {}
-} satisfies Meta<typeof Modal>;
+    argTypes: {},
+    args: {}
+} satisfies Meta<typeof Input>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Clear: Story = {
     args: {
-        isOpen: true,
-        children: 'Modal Modal Modal Modal Modal Modal Modal Modal '
+        placeholder: 'Text'
     }
 };
 
 export const ClearDark: Story = {
     args: {
-        isOpen: true,
-        children: 'Modal Modal Modal Modal Modal Modal Modal Modal '
+        placeholder: 'Text'
     },
     decorators: [ThemeDecorator('dark')]
 };

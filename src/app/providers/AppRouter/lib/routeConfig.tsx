@@ -6,6 +6,7 @@ import { MainPage } from 'pages/MainPage';
 import { ProfilePage } from 'pages/ProfilePage';
 import { PortfolioPage } from 'pages/PortfolioPage';
 import { WatchlistPage } from 'pages/WatchlistPage';
+import { LoginPage } from 'pages/LoginPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
@@ -24,6 +25,10 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     WATCHLIST: {
         path: RoutePath.WATCHLIST,
         element: <WatchlistPage/>
+    },
+    LOGIN: {
+        path: RoutePath.LOGIN,
+        element: <LoginPage/>
     },
     NOT_FOUND: {
         path: RoutePath.NOT_FOUND,

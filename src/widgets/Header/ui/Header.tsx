@@ -75,7 +75,10 @@ export const Header = ({ className }: HeaderProps) => {
                 >
                     X
                 </Button>
-                <Modal isOpen={isAuthModal} onClose={onToggleModal}>
+                <Modal
+                    lazy
+                    isOpen={isAuthModal}
+                    onClose={onToggleModal}>
                     <Counter/>
                 </Modal>
                 <Button
