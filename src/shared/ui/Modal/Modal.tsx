@@ -1,4 +1,4 @@
-import React, { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import React, { ReactNode, useCallback, useEffect, useState } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Portal } from 'shared/ui/Portal/Portal';
@@ -15,8 +15,6 @@ interface ModalProps {
     lazy?: boolean
 }
 
-const ANIMATION_DELAY = 300;
-
 export const Modal = (props: ModalProps) => {
     const {
         className,
@@ -28,17 +26,11 @@ export const Modal = (props: ModalProps) => {
 
     const { theme } = useTheme();
 
-    const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
     const closeHandler = useCallback(() => {
         if (onClose) {
-            setIsClosing(true);
-            timerRef.current = setTimeout(() => {
-                onClose();
-                setIsClosing(false);
-            }, ANIMATION_DELAY);
+            onClose();
         }
     }, [onClose]);
 
@@ -55,23 +47,16 @@ export const Modal = (props: ModalProps) => {
     useEffect(() => {
         if (isOpen) {
             setIsMounted(true);
-        }
-    }, [isOpen]);
-
-    useEffect(() => {
-        if (isOpen) {
             window.addEventListener('keydown', onKeyDown);
         }
 
         return () => {
-            clearTimeout(timerRef.current);
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onKeyDown]);
 
     const mods: Record<string, boolean> = {
-        [s.opened]: isOpen,
-        [s.closed]: isClosing
+        [s.opened]: isOpen
     };
 
     if (lazy && !isMounted) {
