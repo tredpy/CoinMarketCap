@@ -1,6 +1,10 @@
 import { useTranslation } from 'react-i18next';
 
+import { Text } from 'shared/ui/Text/Text';
+
 import { LoginForm } from 'features/AuthByUserName';
+
+import s from './LoginPage.module.scss'
 
 const LoginPage = () => {
     const { t } = useTranslation('login');
@@ -8,8 +12,9 @@ const LoginPage = () => {
     return (
         <div
             data-testid="LoginPage"
+            className={s.LoginPage}
         >
-            {t('Вход')}
+            <Text text={t('Авторизация')} size={'L'}/>
             <LoginForm/>
         </div>
     );

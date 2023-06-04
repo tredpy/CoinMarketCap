@@ -42,6 +42,7 @@ module.exports = {
         '@typescript-eslint/no-confusing-void-expression': 'off',
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/prefer-includes': 'off',
+        '@typescript-eslint/no-floating-promises': 'off',
         'n/handle-callback-err': 'off'
     }
 };

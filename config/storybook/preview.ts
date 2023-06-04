@@ -5,7 +5,11 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { RouteDecorator } from 'shared/config/storybook/RouteDecorator/RouteDecorator';
 
 const preview: Preview = {
-    decorators: [StyleDecorator, ThemeDecorator('light'), RouteDecorator],
+    decorators: [
+        StyleDecorator,
+        RouteDecorator,
+        ThemeDecorator('light')
+    ],
     parameters: {
         actions: { argTypesRegex: '^on[A-Z].*' }
     }

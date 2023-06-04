@@ -2,6 +2,9 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 import { useTranslation } from 'react-i18next';
 
+import { Button } from 'shared/ui/Button/Button';
+import { Text } from 'shared/ui/Text/Text';
+
 import s from './NotFoundPage.module.scss';
 
 interface NotFoundPageProps {
@@ -16,7 +19,9 @@ export const NotFoundPage = ({ className }: NotFoundPageProps) => {
             data-testid="NotFoundPage"
             className={classNames(s.NotFoundPage, {}, [className])}
         >
-            {t('Страница не найдена')}
+            <Text text={t('Упс, что-то пошло не так')} size={'L'}/>
+            <Text text={t('Извините, мы не смогли найти вашу страницу')}/>
+            <Button view={'border'}>{t('Вернуться на Главную Страницу')}</Button>
         </div>
     );
 };

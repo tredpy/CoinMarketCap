@@ -3,7 +3,7 @@ import React, { ReactNode, useCallback, useEffect, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Portal } from 'shared/ui/Portal/Portal';
 
-import { useTheme } from '../../lib/useTheme/useTheme';
+import { useTheme } from '../../lib/hooks/useTheme/useTheme';
 
 import s from './Modal.module.scss';
 

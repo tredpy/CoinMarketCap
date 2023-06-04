@@ -26,6 +26,12 @@ export const SizeL: Story = {
         size: 'L'
     }
 };
+export const Disabled: Story = {
+    args: {
+        children: 'Button',
+        disabled: true
+    }
+};
 
 export const Clear: Story = {
     args: {

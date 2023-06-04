@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { useTheme } from 'shared/lib/useTheme/useTheme';
+import { useTheme } from 'shared/lib/hooks/useTheme/useTheme';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
 import HideDark from 'shared/assets/icons/HideDark.svg';

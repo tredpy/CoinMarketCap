@@ -6,7 +6,10 @@
   "Профиль": "Profile",
   "Регистрация": "Sign up",
   "Вход": "Log in",
-  "Страница не найдена": "Page not found",
+  "Выйти": "Log out",
+  "Упс, что-то пошло не так": "Opps, something went wrong",
+  "Извините, мы не смогли найти вашу страницу": "Sorry, we couldn't find your page",
+  "Вернуться на Главную Страницу": "Back to Homepage",
   "Произошла непредвиденная ошибка": "An unexpected error has occurred",
   "Обновить страницу": "Refresh the page"
 }
