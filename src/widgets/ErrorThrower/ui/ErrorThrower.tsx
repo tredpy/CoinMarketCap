@@ -1,5 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
+import { Text } from 'shared/ui/Text/Text';
 
 import { useTranslation } from 'react-i18next';
 
@@ -20,10 +21,15 @@ export const ErrorThrower = ({ className }: ErrorThrowerProps) => {
             data-testid="ErrorThrower"
             className={classNames(s.ErrorThrower, {}, [className])}
         >
-            <p className={s.title}>{t('Произошла непредвиденная ошибка')}</p>
+            <Text
+                text={t('Произошла непредвиденная ошибка')}
+                size={'L'}
+                className={s.title}
+            />
             <Button
                 onClick={reloadPage}
                 view={'background'}
+                size={'L'}
                 className={s.reloadBtn}
             >
                 {t('Обновить страницу')}

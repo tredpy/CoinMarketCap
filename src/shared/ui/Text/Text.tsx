@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 import s from './Text.module.scss';
 
-export type TextView = 'error'
+export type TextView = 'light' | 'error'
 export type TextSize = 'L'
 
 interface TextProps {

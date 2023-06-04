@@ -5,7 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 import s from './AppLink.module.scss';
 
-export type AppLinkView = 'primary'
+export type AppLinkView = 'clear' | 'primary'
 interface AppLinkProps extends LinkProps {
     className?: string
     view?: AppLinkView

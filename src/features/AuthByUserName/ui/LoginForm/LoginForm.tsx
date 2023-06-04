@@ -43,20 +43,27 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
             data-testid="LoginForm"
             className={classNames(s.LoginForm, {}, [className])}
         >
-            {error && <Text text={t('Неверный логин или пароль')} view={'error'}/>}
+            <Text text={t('Логин')}/>
             <Input
-                placeholder={t('Логин')}
+                placeholder={t('Введите ваш логин...')}
                 onChange={onChangeUsername}
                 value={username}
             />
+            <Text text={t('Пароль')}/>
             <Input
-                placeholder={t('Пароль')}
+                placeholder={t('Введите ваш пароль...')}
                 onChange={onChangePassword}
                 value={password}
+                type='password'
             />
+            {error && <Text
+                text={t('Неверный логин или пароль')}
+                view={'error'}
+                className={s.error}
+            />}
             <Button
                 view={'background'}
-                size={'M'}
+                size={'L'}
                 onClick={onLoginClick}
                 disabled={isLoading}
                 className={s.btn}

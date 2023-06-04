@@ -1,7 +1,9 @@
 {
   "Авторизация": "Authorization",
-  "Войти": "Log in",
-  "Логин": "User",
+  "Войти": "Log In",
+  "Логин": "Username",
+  "Введите ваш логин...": "Enter your username...",
   "Пароль": "Password",
+  "Введите ваш пароль...": "Enter your password...",
   "Неверный логин или пароль": "Invalid username or password"
 }

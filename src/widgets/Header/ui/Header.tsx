@@ -34,9 +34,9 @@ export const Header = ({ className }: HeaderProps) => {
         setIsAuthModal((prev) => !prev);
     }, []);
 
-    const onLogout = useCallback(() => {
+    const onLogoutClickHandler = useCallback(() => {
         dispatch(userActions.logout());
-    }, [dispatch]);
+    }, [dispatch])
 
     if (authData) {
         return (
@@ -48,7 +48,12 @@ export const Header = ({ className }: HeaderProps) => {
                     view={'clear'}
                     size={'L'}
                 >
-                CoinMarketCap
+                    <AppLink
+                        view={'clear'}
+                        to={RoutePath.MAIN}
+                    >
+                        CoinMarketCap
+                    </AppLink>
                 </Button>
                 <div className={s.links}>
                     <AppLink
@@ -56,12 +61,6 @@ export const Header = ({ className }: HeaderProps) => {
                         to={RoutePath.MAIN} className={s.link}
                     >
                         {t('Криптовалюты')}
-                    </AppLink>
-                    <AppLink
-                        view={'primary'}
-                        to={RoutePath.PROFILE} className={s.link}
-                    >
-                        {t('Профиль')}
                     </AppLink>
                     <AppLink
                         view={'primary'}
@@ -75,10 +74,23 @@ export const Header = ({ className }: HeaderProps) => {
                     >
                         {t('Избранное')}
                     </AppLink>
+                    <AppLink
+                        view={'primary'}
+                        to={RoutePath.PROFILE} className={s.link}
+                    >
+                        {t('Профиль')}
+                    </AppLink>
                 </div>
                 <div className={s.menu}>
-                    <ThemeSwitcher className={s.item}/>
                     <LangSwitcher className={s.item}/>
+                    <Button
+                        view={'clear'}
+                        size={'M'}
+                        className={s.item}
+                    >
+                        {t('RUB')}
+                    </Button>
+                    <ThemeSwitcher className={s.item}/>
                     <Button
                         view={'background'}
                         onClick={onToggleModal}
@@ -96,7 +108,7 @@ export const Header = ({ className }: HeaderProps) => {
                         view={'border'}
                         size={'M'}
                         className={s.item}
-                        onClick={onLogout}
+                        onClick={onLogoutClickHandler}
                     >
                         {t('Выйти')}
                     </Button>
@@ -125,12 +137,6 @@ export const Header = ({ className }: HeaderProps) => {
                 </AppLink>
                 <AppLink
                     view={'primary'}
-                    to={RoutePath.PROFILE} className={s.link}
-                >
-                    {t('Профиль')}
-                </AppLink>
-                <AppLink
-                    view={'primary'}
                     to={RoutePath.PORTFOLIO} className={s.link}
                 >
                     {t('Портфель')}
@@ -141,10 +147,23 @@ export const Header = ({ className }: HeaderProps) => {
                 >
                     {t('Избранное')}
                 </AppLink>
+                <AppLink
+                    view={'primary'}
+                    to={RoutePath.PROFILE} className={s.link}
+                >
+                    {t('Профиль')}
+                </AppLink>
             </div>
             <div className={s.menu}>
-                <ThemeSwitcher className={s.item}/>
                 <LangSwitcher className={s.item}/>
+                <Button
+                    view={'clear'}
+                    size={'M'}
+                    className={s.item}
+                >
+                    {t('USD')}
+                </Button>
+                <ThemeSwitcher className={s.item}/>
                 <Button
                     view={'background'}
                     onClick={onToggleModal}
@@ -163,7 +182,12 @@ export const Header = ({ className }: HeaderProps) => {
                     size={'M'}
                     className={s.item}
                 >
-                    {t('Вход')}
+                    <AppLink
+                        view={'primary'}
+                        to={RoutePath.LOGIN}
+                    >
+                        {t('Вход')}
+                    </AppLink>
                 </Button>
                 <Button
                     view={'background'}
