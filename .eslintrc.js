@@ -43,6 +43,7 @@ module.exports = {
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/prefer-includes': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
+        '@typescript-eslint/no-dynamic-delete': 'off',
         'n/handle-callback-err': 'off'
     }
 };

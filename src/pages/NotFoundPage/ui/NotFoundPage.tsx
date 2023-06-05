@@ -40,7 +40,7 @@ export const NotFoundPage = ({ className }: NotFoundPageProps) => {
                     view={'primary'}
                     to={RoutePath.MAIN}
                 >
-                    {t('Вернуться на Главную Страницу')}
+                    {t('Вернуться на Главную')}
                 </AppLink>
             </Button>
         </div>

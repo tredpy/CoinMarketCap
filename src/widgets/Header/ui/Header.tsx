@@ -8,11 +8,14 @@ import { LangSwitcher } from 'features/LangSwitcher';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
 
 import { RoutePath } from 'shared/config/routes/routes';
+import { useTheme } from 'shared/lib/hooks/useTheme/useTheme';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Button } from 'shared/ui/Button/Button';
 import { Modal } from 'shared/ui/Modal/Modal';
+import NotificationDark from 'shared/assets/icons/NotiDark.svg';
+import NotificationLight from 'shared/assets/icons/NotiLight.svg';
 
 import { useTranslation } from 'react-i18next';
 
@@ -24,14 +27,15 @@ interface HeaderProps {
 
 export const Header = ({ className }: HeaderProps) => {
     const { t } = useTranslation();
+    const { theme } = useTheme();
 
     const authData = useSelector(getUserAuthData);
     const dispatch = useAppDispatch();
 
-    const [isAuthModal, setIsAuthModal] = useState(false);
+    const [notificationModal, setNotificationModal] = useState(false);
 
     const onToggleModal = useCallback(() => {
-        setIsAuthModal((prev) => !prev);
+        setNotificationModal((prev) => !prev);
     }, []);
 
     const onLogoutClickHandler = useCallback(() => {
@@ -92,18 +96,20 @@ export const Header = ({ className }: HeaderProps) => {
                     </Button>
                     <ThemeSwitcher className={s.item}/>
                     <Button
-                        view={'background'}
+                        view={'clear'}
                         onClick={onToggleModal}
                         className={s.item}
                     >
-                    X
+                        {theme === 'dark' ? <NotificationLight /> : <NotificationDark />}
                     </Button>
-                    <Modal
-                        lazy
-                        isOpen={isAuthModal}
-                        onClose={onToggleModal}>
-                        <Counter/>
-                    </Modal>
+                    {notificationModal && (
+                        <Modal
+                            lazy
+                            isOpen={notificationModal}
+                            onClose={onToggleModal}>
+                            <Counter/>
+                        </Modal>
+                    )}
                     <Button
                         view={'border'}
                         size={'M'}
@@ -164,19 +170,6 @@ export const Header = ({ className }: HeaderProps) => {
                     {t('USD')}
                 </Button>
                 <ThemeSwitcher className={s.item}/>
-                <Button
-                    view={'background'}
-                    onClick={onToggleModal}
-                    className={s.item}
-                >
-                    X
-                </Button>
-                <Modal
-                    lazy
-                    isOpen={isAuthModal}
-                    onClose={onToggleModal}>
-                    <Counter/>
-                </Modal>
                 <Button
                     view={'border'}
                     size={'M'}
