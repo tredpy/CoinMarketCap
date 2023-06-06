@@ -4,11 +4,11 @@ import {
     componentRender
 } from 'shared/lib/tests/componentRender/componentRender';
 
-import { LoginForm } from './LoginForm';
+import { HeaderLogo } from './HeaderLogo';
 
-describe('LoginForm', () => {
+describe('HeaderLogo', () => {
     test('Render test', () => {
-        componentRender(<LoginForm/>);
-        expect(screen.getByTestId('LoginForm')).toBeInTheDocument();
+        componentRender(<HeaderLogo/>);
+        expect(screen.getByTestId('HeaderLogo')).toBeInTheDocument();
     });
 });

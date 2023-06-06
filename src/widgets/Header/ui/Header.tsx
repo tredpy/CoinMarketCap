@@ -1,21 +1,20 @@
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
 import { getUserAuthData, userActions } from 'entities/User';
-import { Counter } from 'entities/Counter';
 
+import { HeaderLogo } from 'features/HeaderLogo';
+import { HeaderNavigation } from 'features/HeaderNavigation';
 import { LangSwitcher } from 'features/LangSwitcher';
+import { CurrencySwitcher } from 'features/CurrencySwitcher';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
+import { HeaderNotification } from 'features/HeaderNotification';
 
 import { RoutePath } from 'shared/config/routes/routes';
-import { useTheme } from 'shared/lib/hooks/useTheme/useTheme';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Button } from 'shared/ui/Button/Button';
-import { Modal } from 'shared/ui/Modal/Modal';
-import NotificationDark from 'shared/assets/icons/NotiDark.svg';
-import NotificationLight from 'shared/assets/icons/NotiLight.svg';
 
 import { useTranslation } from 'react-i18next';
 
@@ -27,16 +26,9 @@ interface HeaderProps {
 
 export const Header = ({ className }: HeaderProps) => {
     const { t } = useTranslation();
-    const { theme } = useTheme();
 
     const authData = useSelector(getUserAuthData);
     const dispatch = useAppDispatch();
-
-    const [notificationModal, setNotificationModal] = useState(false);
-
-    const onToggleModal = useCallback(() => {
-        setNotificationModal((prev) => !prev);
-    }, []);
 
     const onLogoutClickHandler = useCallback(() => {
         dispatch(userActions.logout());
@@ -48,68 +40,13 @@ export const Header = ({ className }: HeaderProps) => {
                 data-testid="Header"
                 className={classNames(s.Header, {}, [className])}
             >
-                <Button
-                    view={'clear'}
-                    size={'L'}
-                >
-                    <AppLink
-                        view={'clear'}
-                        to={RoutePath.MAIN}
-                    >
-                        CoinMarketCap
-                    </AppLink>
-                </Button>
-                <div className={s.links}>
-                    <AppLink
-                        view={'primary'}
-                        to={RoutePath.MAIN} className={s.link}
-                    >
-                        {t('Криптовалюты')}
-                    </AppLink>
-                    <AppLink
-                        view={'primary'}
-                        to={RoutePath.PORTFOLIO} className={s.link}
-                    >
-                        {t('Портфель')}
-                    </AppLink>
-                    <AppLink
-                        view={'primary'}
-                        to={RoutePath.WATCHLIST} className={s.link}
-                    >
-                        {t('Избранное')}
-                    </AppLink>
-                    <AppLink
-                        view={'primary'}
-                        to={RoutePath.PROFILE} className={s.link}
-                    >
-                        {t('Профиль')}
-                    </AppLink>
-                </div>
+                <HeaderLogo/>
+                <HeaderNavigation className={s.navigation}/>
                 <div className={s.menu}>
                     <LangSwitcher className={s.item}/>
-                    <Button
-                        view={'clear'}
-                        size={'M'}
-                        className={s.item}
-                    >
-                        {t('RUB')}
-                    </Button>
+                    <CurrencySwitcher className={s.item}/>
                     <ThemeSwitcher className={s.item}/>
-                    <Button
-                        view={'clear'}
-                        onClick={onToggleModal}
-                        className={s.item}
-                    >
-                        {theme === 'dark' ? <NotificationLight /> : <NotificationDark />}
-                    </Button>
-                    {notificationModal && (
-                        <Modal
-                            lazy
-                            isOpen={notificationModal}
-                            onClose={onToggleModal}>
-                            <Counter/>
-                        </Modal>
-                    )}
+                    <HeaderNotification className={s.item}/>
                     <Button
                         view={'border'}
                         size={'M'}
@@ -128,47 +65,11 @@ export const Header = ({ className }: HeaderProps) => {
             data-testid="Header"
             className={classNames(s.Header, {}, [className])}
         >
-            <Button
-                view={'clear'}
-                size={'L'}
-            >
-                CoinMarketCap
-            </Button>
-            <div className={s.links}>
-                <AppLink
-                    view={'primary'}
-                    to={RoutePath.MAIN} className={s.link}
-                >
-                    {t('Криптовалюты')}
-                </AppLink>
-                <AppLink
-                    view={'primary'}
-                    to={RoutePath.PORTFOLIO} className={s.link}
-                >
-                    {t('Портфель')}
-                </AppLink>
-                <AppLink
-                    view={'primary'}
-                    to={RoutePath.WATCHLIST} className={s.link}
-                >
-                    {t('Избранное')}
-                </AppLink>
-                <AppLink
-                    view={'primary'}
-                    to={RoutePath.PROFILE} className={s.link}
-                >
-                    {t('Профиль')}
-                </AppLink>
-            </div>
+            <HeaderLogo/>
+            <HeaderNavigation className={s.navigation}/>
             <div className={s.menu}>
                 <LangSwitcher className={s.item}/>
-                <Button
-                    view={'clear'}
-                    size={'M'}
-                    className={s.item}
-                >
-                    {t('USD')}
-                </Button>
+                <CurrencySwitcher className={s.item}/>
                 <ThemeSwitcher className={s.item}/>
                 <Button
                     view={'border'}

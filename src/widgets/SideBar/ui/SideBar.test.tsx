@@ -2,7 +2,7 @@ import { fireEvent, screen } from '@testing-library/react';
 
 import {
     componentRender
-} from 'shared/lib/testsHelpers/componentRender';
+} from 'shared/lib/tests/componentRender/componentRender';
 
 import { SideBar } from './SideBar';
 

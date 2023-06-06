@@ -1,14 +1,10 @@
-import { screen } from '@testing-library/react';
-
-import {
-    componentRender
-} from 'shared/lib/testsHelpers/componentRender';
+import { render, screen } from '@testing-library/react';
 
 import { ThemeSwitcher } from './ThemeSwitcher';
 
 describe('ThemeSwitcher', () => {
     test('Render test', () => {
-        componentRender(<ThemeSwitcher/>);
+        render(<ThemeSwitcher/>);
         expect(screen.getByTestId('ThemeSwitcher')).toBeInTheDocument();
     });
 });
