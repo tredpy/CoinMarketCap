@@ -6,9 +6,12 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import s from './AppLink.module.scss';
 
 export type AppLinkView = 'clear' | 'primary'
+export type AppLinkSize = 'L'
+
 interface AppLinkProps extends LinkProps {
     className?: string
     view?: AppLinkView
+    size?: AppLinkSize
 }
 
 export const AppLink: FC<AppLinkProps> = (props) => {
@@ -17,6 +20,7 @@ export const AppLink: FC<AppLinkProps> = (props) => {
         className,
         children,
         view,
+        size,
         ...otherProps
     } = props;
 
@@ -24,7 +28,7 @@ export const AppLink: FC<AppLinkProps> = (props) => {
         <Link
             data-testid="AppLink"
             to={to}
-            className={classNames(s.AppLink, {}, [className, s[view]])}
+            className={classNames(s.AppLink, {}, [className, s[view], s[size]])}
             {...otherProps}
         >
             {children}

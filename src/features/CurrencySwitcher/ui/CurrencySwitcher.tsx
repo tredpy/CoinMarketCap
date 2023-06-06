@@ -14,17 +14,14 @@ export const CurrencySwitcher = ({ className }: CurrencySwitcherProps) => {
     }, []);
 
     return (
-        <div
+        <Button
             data-testid="CurrencySwitcher"
             className={classNames('', {}, [className])}
+            view={'clear'}
+            size={'M'}
+            onClick={onToggleCurrency}
         >
-            <Button
-                view={'clear'}
-                size={'M'}
-                onClick={onToggleCurrency}
-            >
-                {currency ? 'RUB' : 'USD'}
-            </Button>
-        </div>
+            {currency ? 'RUB' : 'USD'}
+        </Button>
     );
 };

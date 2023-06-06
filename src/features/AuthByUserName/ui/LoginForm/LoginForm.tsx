@@ -32,6 +32,7 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
     const { t } = useTranslation('login');
 
     const dispatch = useAppDispatch();
+
     const username = useSelector(getLoginUsername);
     const password = useSelector(getLoginPassword);
     const isLoading = useSelector(getLoginIsLoading);

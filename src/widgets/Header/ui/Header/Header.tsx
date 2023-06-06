@@ -1,14 +1,17 @@
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useSelector } from 'react-redux';
+
+import { HeaderNavigationList } from '../../model/items';
+
+import { HeaderLogo } from '../HeaderItems/HeaderLogo';
+import { HeaderNavigation } from '../HeaderItems/HeaderNavigation';
+import { HeaderNotification } from '../HeaderItems/HeaderNotification';
 
 import { getUserAuthData, userActions } from 'entities/User';
 
-import { HeaderLogo } from 'features/HeaderLogo';
-import { HeaderNavigation } from 'features/HeaderNavigation';
 import { LangSwitcher } from 'features/LangSwitcher';
 import { CurrencySwitcher } from 'features/CurrencySwitcher';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
-import { HeaderNotification } from 'features/HeaderNotification';
 
 import { RoutePath } from 'shared/config/routes/routes';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -27,6 +30,10 @@ interface HeaderProps {
 export const Header = ({ className }: HeaderProps) => {
     const { t } = useTranslation();
 
+    const navigationList = useMemo(() => HeaderNavigationList.map((item) => (
+        <HeaderNavigation item={item} key={item.path}/>
+    )), []);
+
     const authData = useSelector(getUserAuthData);
     const dispatch = useAppDispatch();
 
@@ -41,7 +48,9 @@ export const Header = ({ className }: HeaderProps) => {
                 className={classNames(s.Header, {}, [className])}
             >
                 <HeaderLogo/>
-                <HeaderNavigation className={s.navigation}/>
+                <div className={s.navigation}>
+                    {navigationList}
+                </div>
                 <div className={s.menu}>
                     <LangSwitcher className={s.item}/>
                     <CurrencySwitcher className={s.item}/>
@@ -66,7 +75,9 @@ export const Header = ({ className }: HeaderProps) => {
             className={classNames(s.Header, {}, [className])}
         >
             <HeaderLogo/>
-            <HeaderNavigation className={s.navigation}/>
+            <div className={s.navigation}>
+                {navigationList}
+            </div>
             <div className={s.menu}>
                 <LangSwitcher className={s.item}/>
                 <CurrencySwitcher className={s.item}/>
