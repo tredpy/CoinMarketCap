@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
 import { Text } from 'shared/ui/Text/Text';
@@ -10,7 +12,7 @@ interface ErrorThrowerProps {
     className?: string
 }
 
-export const ErrorThrower = ({ className }: ErrorThrowerProps) => {
+export const ErrorThrower = memo(({ className }: ErrorThrowerProps) => {
     const { t } = useTranslation();
     const reloadPage = () => {
         window.location.reload();
@@ -36,4 +38,4 @@ export const ErrorThrower = ({ className }: ErrorThrowerProps) => {
             </Button>
         </div>
     );
-};
+});

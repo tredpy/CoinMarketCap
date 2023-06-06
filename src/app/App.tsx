@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react';
+import { memo, Suspense, useEffect } from 'react';
 
 import { AppRouter } from './providers/AppRouter';
 
@@ -14,7 +14,7 @@ import { useTheme } from 'shared/lib/hooks/useTheme/useTheme';
 
 import './styles/index.scss';
 
-export const App = () => {
+export const App = memo(() => {
     const { theme } = useTheme();
 
     const dispatch = useAppDispatch();
@@ -40,4 +40,4 @@ export const App = () => {
             </Suspense>
         </div>
     );
-};
+});

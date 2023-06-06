@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 
 import { Counter } from 'entities/Counter';
 
@@ -15,7 +15,7 @@ interface HeaderNotificationProps {
     className?: string
 }
 
-export const HeaderNotification = ({ className }: HeaderNotificationProps) => {
+export const HeaderNotification = memo(({ className }: HeaderNotificationProps) => {
     const { theme } = useTheme();
 
     const [notificationModal, setNotificationModal] = useState(false);
@@ -46,4 +46,4 @@ export const HeaderNotification = ({ className }: HeaderNotificationProps) => {
             )}
         </div>
     );
-};
+});

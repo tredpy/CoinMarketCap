@@ -1,7 +1,9 @@
+import { memo } from 'react';
+
 import { RoutePath } from 'shared/config/routes/routes';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 
-export const HeaderLogo = () => {
+export const HeaderLogo = memo(() => {
     return (
         <AppLink
             data-testid="HeaderLogo"
@@ -12,4 +14,4 @@ export const HeaderLogo = () => {
                 CoinMarketCap
         </AppLink>
     );
-};
+});

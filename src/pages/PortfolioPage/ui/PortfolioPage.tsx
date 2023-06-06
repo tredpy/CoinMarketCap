@@ -1,6 +1,8 @@
+import { memo } from 'react';
+
 import { useTranslation } from 'react-i18next';
 
-const PortfolioPage = () => {
+const PortfolioPage = memo(() => {
     const { t } = useTranslation('portfolio');
 
     return (
@@ -10,6 +12,6 @@ const PortfolioPage = () => {
             {t('Портфель')}
         </div>
     );
-};
+});
 
 export default PortfolioPage;

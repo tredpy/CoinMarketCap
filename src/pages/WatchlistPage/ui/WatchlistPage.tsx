@@ -1,6 +1,8 @@
+import { memo } from 'react';
+
 import { useTranslation } from 'react-i18next';
 
-const WatchlistPage = () => {
+const WatchlistPage = memo(() => {
     const { t } = useTranslation('watchlist');
 
     return (
@@ -10,6 +12,6 @@ const WatchlistPage = () => {
             {t('Избранное')}
         </div>
     );
-};
+});
 
 export default WatchlistPage;

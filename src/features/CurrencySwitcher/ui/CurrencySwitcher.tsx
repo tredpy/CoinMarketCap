@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
@@ -6,7 +6,7 @@ import { Button } from 'shared/ui/Button/Button';
 interface CurrencySwitcherProps {
     className?: string
 }
-export const CurrencySwitcher = ({ className }: CurrencySwitcherProps) => {
+export const CurrencySwitcher = memo(({ className }: CurrencySwitcherProps) => {
     const [currency, setCurrency] = useState(false);
 
     const onToggleCurrency = useCallback(() => {
@@ -24,4 +24,4 @@ export const CurrencySwitcher = ({ className }: CurrencySwitcherProps) => {
             {currency ? 'RUB' : 'USD'}
         </Button>
     );
-};
+});

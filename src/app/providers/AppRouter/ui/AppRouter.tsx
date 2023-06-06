@@ -1,11 +1,11 @@
+import { memo, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Suspense } from 'react';
 
 import { routeConfig } from '../lib/routeConfig';
 
 import { PageLoader } from 'widgets/PageLoader';
 
-const AppRouter = () => (
+const AppRouter = memo(() => (
     <Routes>
         {Object.values(routeConfig).map(({ element, path }) => (
             <Route
@@ -21,6 +21,6 @@ const AppRouter = () => (
             />
         ))}
     </Routes>
-);
+));
 
 export default AppRouter;

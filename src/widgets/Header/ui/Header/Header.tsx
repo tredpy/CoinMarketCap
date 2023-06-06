@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react';
+import { memo, useCallback, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 
 import { HeaderNavigationList } from '../../model/items';
@@ -27,7 +27,7 @@ interface HeaderProps {
     className?: string
 }
 
-export const Header = ({ className }: HeaderProps) => {
+export const Header = memo(({ className }: HeaderProps) => {
     const { t } = useTranslation();
 
     const navigationList = useMemo(() => HeaderNavigationList.map((item) => (
@@ -104,4 +104,4 @@ export const Header = ({ className }: HeaderProps) => {
             </div>
         </div>
     );
-};
+});

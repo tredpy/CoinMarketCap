@@ -1,12 +1,14 @@
-import { useTranslation } from 'react-i18next';
-
-import { Text } from 'shared/ui/Text/Text';
+import { memo } from 'react';
 
 import { LoginForm } from 'features/AuthByUserName';
 
+import { Text } from 'shared/ui/Text/Text';
+
+import { useTranslation } from 'react-i18next';
+
 import s from './LoginPage.module.scss'
 
-const LoginPage = () => {
+const LoginPage = memo(() => {
     const { t } = useTranslation('login');
 
     return (
@@ -18,6 +20,6 @@ const LoginPage = () => {
             <LoginForm/>
         </div>
     );
-};
+});
 
 export default LoginPage;

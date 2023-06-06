@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
 
@@ -7,8 +9,9 @@ interface LangSwitcherProps {
     className?: string
 }
 
-export const LangSwitcher = ({ className }: LangSwitcherProps) => {
+export const LangSwitcher = memo(({ className }: LangSwitcherProps) => {
     const { t, i18n } = useTranslation();
+
     const toggleLang = () => {
         void i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
     };
@@ -24,4 +27,4 @@ export const LangSwitcher = ({ className }: LangSwitcherProps) => {
             {t('Русский')}
         </Button>
     );
-};
+});

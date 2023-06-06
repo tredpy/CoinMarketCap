@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 
 import { useTheme } from 'shared/lib/hooks/useTheme/useTheme';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -12,7 +12,7 @@ interface SideBarProps {
     className?: string
 }
 
-export const SideBar = ({ className }: SideBarProps) => {
+export const SideBar = memo(({ className }: SideBarProps) => {
     const { theme } = useTheme();
     const [collapsed, setCollapsed] = useState(false);
     const onToggle = () => {
@@ -35,4 +35,4 @@ export const SideBar = ({ className }: SideBarProps) => {
             </Button>
         </div>
     );
-};
+});
