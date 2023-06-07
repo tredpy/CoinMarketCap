@@ -20,5 +20,11 @@
       "password": "admin"
     }
   ],
-  "profile": { "name": "PROFILE" }
+  "profile": {
+    "username": "admin",
+    "age": 35,
+    "country": "Russia",
+    "city": "Moscow",
+    "avatar": "https://play-lh.googleusercontent.com/V-lvUzA5kK0Xw3wdg8Ct3vfIMXUX5vXYcNLPmudaZ-eyQjedYz-luqIuLmJO6KodE0Y"
+  }
 }
