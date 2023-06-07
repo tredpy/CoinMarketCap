@@ -1,9 +1,17 @@
+.primary {
+    color: var(--primary-color);
+}
+
 .light {
     color: var(--secondary-color);
 }
 
 .error {
     color: var(--color-error);
+}
+
+.M {
+    font: var(--font-m);
 }
 
 .L {

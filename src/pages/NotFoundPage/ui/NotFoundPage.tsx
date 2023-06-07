@@ -24,6 +24,7 @@ export const NotFoundPage = memo(({ className }: NotFoundPageProps) => {
         >
             <Text
                 text={t('Упс, что-то пошло не так')}
+                view={'primary'}
                 size={'L'}
                 className={s.item}
             />
@@ -31,6 +32,7 @@ export const NotFoundPage = memo(({ className }: NotFoundPageProps) => {
                 text={t('Извините, мы не смогли найти вашу страницу')}
                 className={s.item}
                 view={'light'}
+                size={'M'}
             />
             <Button
                 view={'border'}

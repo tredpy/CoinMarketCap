@@ -19,6 +19,7 @@ export const HeaderNavigation = memo(({ item }: HeaderNavigationProps) => {
         <AppLink
             data-testid="HeaderNavigation"
             view={'primary'}
+            size={'M'}
             to={item.path}
             className={s.links}
         >

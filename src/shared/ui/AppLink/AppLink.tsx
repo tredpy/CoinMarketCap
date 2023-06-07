@@ -1,12 +1,12 @@
 import { memo } from 'react';
 import { Link, LinkProps } from 'react-router-dom';
 
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 
 import s from './AppLink.module.scss';
 
 export type AppLinkView = 'clear' | 'primary'
-export type AppLinkSize = 'L'
+export type AppLinkSize = 'M' | 'L'
 
 interface AppLinkProps extends LinkProps {
     className?: string
@@ -19,16 +19,21 @@ export const AppLink = memo((props: AppLinkProps) => {
         to,
         className,
         children,
-        view,
-        size,
+        view = 'clear',
+        size = 'L',
         ...otherProps
     } = props;
+
+    const mods: Mods = {
+        [s[view]]: true,
+        [s[size]]: true
+    }
 
     return (
         <Link
             data-testid="AppLink"
             to={to}
-            className={classNames(s.AppLink, {}, [className, s[view], s[size]])}
+            className={classNames(s.AppLink, mods, [className])}
             {...otherProps}
         >
             {children}

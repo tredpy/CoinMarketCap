@@ -59,13 +59,19 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
                 data-testid="LoginForm"
                 className={classNames(s.LoginForm, {}, [className])}
             >
-                <Text text={t('Логин')}/>
+                <Text
+                    view={'primary'}
+                    text={t('Логин')}
+                />
                 <Input
                     placeholder={t('Введите ваш логин...')}
                     onChange={onChangeUsername}
                     value={username}
                 />
-                <Text text={t('Пароль')}/>
+                <Text
+                    view={'primary'}
+                    text={t('Пароль')}
+                />
                 <Input
                     placeholder={t('Введите ваш пароль...')}
                     onChange={onChangePassword}

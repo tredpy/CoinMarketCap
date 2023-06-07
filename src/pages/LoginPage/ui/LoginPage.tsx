@@ -16,7 +16,7 @@ const LoginPage = memo(() => {
             data-testid="LoginPage"
             className={s.LoginPage}
         >
-            <Text text={t('Авторизация')} size={'L'}/>
+            <Text text={t('Авторизация')} view={'primary'} size={'L'}/>
             <LoginForm/>
         </div>
     );

@@ -44,6 +44,9 @@ module.exports = {
         '@typescript-eslint/prefer-includes': 'off',
         '@typescript-eslint/no-floating-promises': 'off',
         '@typescript-eslint/no-dynamic-delete': 'off',
+        '@typescript-eslint/no-invalid-void-type': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/no-unnecessary-type-assertion': 'off',
         'n/handle-callback-err': 'off'
     }
 };

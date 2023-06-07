@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, memo } from 'react';
 
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 
 import s from './Button.module.scss';
 
@@ -18,13 +18,15 @@ export const Button = memo((props: ButtonProps) => {
     const {
         className,
         children,
-        view,
-        size,
+        view = 'clear',
+        size = 'M',
         disabled,
         ...otherProps
     } = props;
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
+        [s[view]]: true,
+        [s[size]]: true,
         [s.disabled]: disabled
     };
 
@@ -32,7 +34,7 @@ export const Button = memo((props: ButtonProps) => {
         <button
             data-testid="Button"
             type="button"
-            className={classNames(s.Button, mods, [className, s[view], s[size]])}
+            className={classNames(s.Button, mods, [className])}
             disabled={disabled}
             {...otherProps}
         >

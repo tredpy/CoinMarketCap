@@ -1,4 +1,4 @@
-import { Country } from 'shared/const/common';
+import { Country } from 'shared/const/country';
 
 export interface Profile {
     username: string

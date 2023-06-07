@@ -10,7 +10,8 @@ void i18n
         interpolation: {
             escapeValue: false
         },
-        resources: { ru: { translations: {} } }
+        resources: { ru: { translations: {} } },
+        returnNull: false
     });
 
 export default i18n;
