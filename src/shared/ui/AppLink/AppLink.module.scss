@@ -10,6 +10,10 @@
     color: var(--primary-color);
 }
 
+.primary:hover {
+    color: var(--secondary-color);
+}
+
 .M {
     font: var(--font-m);
 }

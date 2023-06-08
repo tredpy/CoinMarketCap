@@ -31,7 +31,10 @@ export const Header = memo(({ className }: HeaderProps) => {
     const { t } = useTranslation();
 
     const navigationList = useMemo(() => HeaderNavigationList.map((item) => (
-        <HeaderNavigation item={item} key={item.path}/>
+        <HeaderNavigation
+            item={item}
+            key={item.path}
+        />
     )), []);
 
     const authData = useSelector(getUserAuthData);
@@ -89,6 +92,7 @@ export const Header = memo(({ className }: HeaderProps) => {
                 >
                     <AppLink
                         view={'primary'}
+                        size={'M'}
                         to={RoutePath.LOGIN}
                     >
                         {t('Вход')}

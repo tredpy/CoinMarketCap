@@ -40,7 +40,8 @@ export const HeaderNotification = memo(({ className }: HeaderNotificationProps) 
                 <Modal
                     lazy
                     isOpen={notificationModal}
-                    onClose={onToggleModal}>
+                    onClose={onToggleModal}
+                >
                     <Counter/>
                 </Modal>
             )}
