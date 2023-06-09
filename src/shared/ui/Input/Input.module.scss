@@ -1,6 +1,17 @@
 .input {
     width: 100%;
     font: var(--font-m);
-    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    background: var(--bg-light);
+    color: var(--secondary-color);
+    border-radius: 0.25vw;
     padding: 0.5vw;
+}
+
+.input::placeholder {
+    color: var(--placeholder);
+}
+
+.input:focus {
+    outline: 1.5px solid var(--primary-color);
 }

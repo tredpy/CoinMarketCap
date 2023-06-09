@@ -61,6 +61,7 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
             >
                 <Text
                     view={'primary'}
+                    className={s.title}
                     text={t('Логин')}
                 />
                 <Input
@@ -70,6 +71,7 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
                 />
                 <Text
                     view={'primary'}
+                    className={s.title}
                     text={t('Пароль')}
                 />
                 <Input

@@ -15,15 +15,35 @@
 .border {
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
-    border-radius: 5px;
+    border-radius: 0.25vw;
     background: var(--bg-light);
+}
+
+.border:hover {
+    color: var(--bg-light);
+    background: var(--primary-color);
+    transition: 0.5s;
+}
+
+.border:active {
+    transform: translateY(-0.25vw);
 }
 
 .background {
     color: var(--bg-light);
     border: 1px solid var(--primary-color);
-    border-radius: 5px;
+    border-radius: 0.25vw;
     background: var(--primary-color);
+}
+
+.background:hover {
+    border: 1px solid var(--primary-color-hover);
+    background: var(--primary-color-hover);
+    transition: 0.5s;
+}
+
+.background:active {
+    transform: translateY(-0.25vw);
 }
 
 .M {

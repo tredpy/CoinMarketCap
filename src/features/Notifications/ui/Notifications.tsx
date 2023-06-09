@@ -9,13 +9,13 @@ import { Modal } from 'shared/ui/Modal/Modal';
 import NotificationDark from 'shared/assets/icons/NotiDark.svg';
 import NotificationLight from 'shared/assets/icons/NotiLight.svg';
 
-import s from './HeaderNotification.module.scss'
+import s from './Notifications.module.scss'
 
-interface HeaderNotificationProps {
+interface NotificationsProps {
     className?: string
 }
 
-export const HeaderNotification = memo(({ className }: HeaderNotificationProps) => {
+export const Notifications = memo(({ className }: NotificationsProps) => {
     const { theme } = useTheme();
 
     const [notificationModal, setNotificationModal] = useState(false);
@@ -26,7 +26,7 @@ export const HeaderNotification = memo(({ className }: HeaderNotificationProps) 
 
     return (
         <div
-            data-testid="HeaderNotification"
+            data-testid="Notifications"
             className={classNames('', {}, [className])}
         >
             <Button
@@ -34,7 +34,11 @@ export const HeaderNotification = memo(({ className }: HeaderNotificationProps) 
                 onClick={onToggleModal}
                 className={s.btn}
             >
-                {theme === 'dark' ? <NotificationLight /> : <NotificationDark />}
+                {
+                    theme === 'dark'
+                        ? <NotificationLight className={s.icon}/>
+                        : <NotificationDark className={s.icon}/>
+                }
             </Button>
             {notificationModal && (
                 <Modal

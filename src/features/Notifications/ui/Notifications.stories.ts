@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { HeaderNotification } from './HeaderNotification';
+import { Notifications } from './Notifications';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 
 const meta = {
-    title: 'features/HeaderNotification',
-    component: HeaderNotification,
+    title: 'features/Notifications',
+    component: Notifications,
     tags: ['autodocs'],
     argTypes: {}
-} satisfies Meta<typeof HeaderNotification>;
+} satisfies Meta<typeof Notifications>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

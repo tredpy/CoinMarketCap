@@ -1,9 +1,9 @@
 import { memo } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { RoutePath } from 'shared/config/routes/routes';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Text } from 'shared/ui/Text/Text';
 
 import { useTranslation } from 'react-i18next';
@@ -16,6 +16,12 @@ interface NotFoundPageProps {
 
 export const NotFoundPage = memo(({ className }: NotFoundPageProps) => {
     const { t } = useTranslation();
+
+    const navigate = useNavigate()
+
+    const onBackToHomepageClickHandler = () => {
+        navigate(RoutePath.MAIN)
+    }
 
     return (
         <div
@@ -38,13 +44,9 @@ export const NotFoundPage = memo(({ className }: NotFoundPageProps) => {
                 view={'border'}
                 size={'L'}
                 className={s.item}
+                onClick={onBackToHomepageClickHandler}
             >
-                <AppLink
-                    view={'primary'}
-                    to={RoutePath.MAIN}
-                >
-                    {t('Вернуться на Главную')}
-                </AppLink>
+                {t('Вернуться на Главную')}
             </Button>
         </div>
     );

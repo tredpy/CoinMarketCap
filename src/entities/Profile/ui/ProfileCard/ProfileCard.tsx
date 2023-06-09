@@ -24,7 +24,7 @@ export const ProfileCard = ({ className }: ProfileCardProps) => {
         <div className={classNames(s.ProfileCard, {}, [className])}>
             <div className={s.header}>
                 <Text
-                    view={'primary'}
+                    view={'light'}
                     size={'L'}
                     text={t('Профиль')}
                 />

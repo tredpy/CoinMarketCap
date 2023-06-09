@@ -1,6 +1,7 @@
 .SideBar {
     height: calc(100vh - var(--header-height));
     width: var(--sidebar-width);
+    border-right: 1px solid var(--border);
     background: var(--bg-dark);
     position: relative;
     transition: width 0.3s;
@@ -14,4 +15,8 @@
     position: absolute;
     right: -15px;
     bottom: 40px;
+}
+
+.icon {
+    height: calc(10px + 0.66vw);
 }

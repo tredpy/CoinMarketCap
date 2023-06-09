@@ -8,6 +8,14 @@
     margin-top: 0.5vw;
 }
 
+.title {
+    margin-top: 0.5vw;
+}
+
+.title:first-child {
+    margin-top: 0;
+}
+
 .btn {
     margin-top: 1vw;
 }

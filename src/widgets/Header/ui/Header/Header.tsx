@@ -1,14 +1,15 @@
 import { memo, useCallback, useMemo } from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 import { HeaderNavigationList } from '../../model/items';
 
 import { HeaderLogo } from '../HeaderItems/HeaderLogo';
 import { HeaderNavigation } from '../HeaderItems/HeaderNavigation';
-import { HeaderNotification } from '../HeaderItems/HeaderNotification';
 
 import { getUserAuthData, userActions } from 'entities/User';
 
+import { Notifications } from 'features/Notifications';
 import { LangSwitcher } from 'features/LangSwitcher';
 import { CurrencySwitcher } from 'features/CurrencySwitcher';
 import { ThemeSwitcher } from 'features/ThemeSwitcher';
@@ -16,7 +17,6 @@ import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import { RoutePath } from 'shared/config/routes/routes';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink } from 'shared/ui/AppLink/AppLink';
 import { Button } from 'shared/ui/Button/Button';
 
 import { useTranslation } from 'react-i18next';
@@ -30,6 +30,8 @@ interface HeaderProps {
 export const Header = memo(({ className }: HeaderProps) => {
     const { t } = useTranslation();
 
+    const navigate = useNavigate()
+
     const navigationList = useMemo(() => HeaderNavigationList.map((item) => (
         <HeaderNavigation
             item={item}
@@ -39,6 +41,10 @@ export const Header = memo(({ className }: HeaderProps) => {
 
     const authData = useSelector(getUserAuthData);
     const dispatch = useAppDispatch();
+
+    const onLoginClickHandler = () => {
+        navigate(RoutePath.LOGIN)
+    }
 
     const onLogoutClickHandler = useCallback(() => {
         dispatch(userActions.logout());
@@ -58,7 +64,7 @@ export const Header = memo(({ className }: HeaderProps) => {
                     <LangSwitcher className={s.item}/>
                     <CurrencySwitcher className={s.item}/>
                     <ThemeSwitcher className={s.item}/>
-                    <HeaderNotification className={s.item}/>
+                    <Notifications className={s.item}/>
                     <Button
                         view={'border'}
                         size={'M'}
@@ -89,14 +95,9 @@ export const Header = memo(({ className }: HeaderProps) => {
                     view={'border'}
                     size={'M'}
                     className={s.item}
+                    onClick={onLoginClickHandler}
                 >
-                    <AppLink
-                        view={'primary'}
-                        size={'M'}
-                        to={RoutePath.LOGIN}
-                    >
-                        {t('Вход')}
-                    </AppLink>
+                    {t('Вход')}
                 </Button>
                 <Button
                     view={'background'}

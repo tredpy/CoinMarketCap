@@ -5,6 +5,8 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
 import HideDark from 'shared/assets/icons/HideDark.svg';
 import HideLight from 'shared/assets/icons/HideLight.svg';
+import ShowLight from 'shared/assets/icons/ShowLight.svg';
+import ShowDark from 'shared/assets/icons/ShowDark.svg';
 
 import s from './SideBar.module.scss';
 
@@ -26,15 +28,30 @@ export const SideBar = memo(({ className }: SideBarProps) => {
             data-testid="SideBar"
             className={classNames(s.SideBar, { [s.collapsed]: collapsed }, [className])}
         >
-            <Button
-                data-testid="SideBarCollapseToggle"
-                view={'clear'}
-                size={'M'}
-                onClick={onToggle}
-                className={s.collapseBtn}
-            >
-                {theme === 'dark' ? <HideLight/> : <HideDark/>}
-            </Button>
+            {theme === 'dark'
+                ? <Button
+                    data-testid="SideBarCollapseToggle"
+                    view={'clear'}
+                    size={'M'}
+                    onClick={onToggle}
+                    className={s.collapseBtn}
+                >
+                    {
+                        collapsed ? <ShowLight className={s.icon}/> : <HideLight className={s.icon}/>
+                    }
+                </Button>
+                : <Button
+                    data-testid="SideBarCollapseToggle"
+                    view={'clear'}
+                    size={'M'}
+                    onClick={onToggle}
+                    className={s.collapseBtn}
+                >
+                    {
+                        collapsed ? <ShowDark className={s.icon}/> : <HideDark className={s.icon}/>
+                    }
+                </Button>
+            }
         </div>
     );
 });

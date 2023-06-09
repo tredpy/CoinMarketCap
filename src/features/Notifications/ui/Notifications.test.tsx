@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 
-import { HeaderNotification } from './HeaderNotification';
+import { Notifications } from './Notifications';
 
 describe('HeaderNotification', () => {
     test('Render test', () => {
-        render(<HeaderNotification/>);
+        render(<Notifications/>);
         expect(screen.getByTestId('HeaderNotification')).toBeInTheDocument();
     });
 });
