@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react';
 
 import { Notifications } from './Notifications';
 
-describe('HeaderNotification', () => {
+describe('Notifications', () => {
     test('Render test', () => {
         render(<Notifications/>);
-        expect(screen.getByTestId('HeaderNotification')).toBeInTheDocument();
+        expect(screen.getByTestId('Notifications')).toBeInTheDocument();
     });
 });
