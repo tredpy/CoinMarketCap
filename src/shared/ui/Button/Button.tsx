@@ -4,7 +4,7 @@ import { classNames, Mods } from 'shared/lib/classNames/classNames';
 
 import s from './Button.module.scss';
 
-export type ButtonView = 'clear' | 'border' | 'background'
+export type ButtonView = 'clear' | 'border' | 'border_red' | 'background'
 export type ButtonSize = 'M' | 'L'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

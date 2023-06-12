@@ -21,10 +21,12 @@
     }
   ],
   "profile": {
-    "username": "admin",
-    "age": 35,
+    "username": "Admin",
+    "age": 23,
     "country": "Russia",
     "city": "Moscow",
-    "avatar": "https://play-lh.googleusercontent.com/V-lvUzA5kK0Xw3wdg8Ct3vfIMXUX5vXYcNLPmudaZ-eyQjedYz-luqIuLmJO6KodE0Y"
+    "avatar": "https://play-lh.googleusercontent.com/V-lvUzA5kK0Xw3wdg8Ct3vfIMXUX5vXYcNLPmudaZ-eyQjedYz-luqIuLmJO6KodE0Y",
+    "first": "Егор",
+    "lastname": "ы"
   }
 }

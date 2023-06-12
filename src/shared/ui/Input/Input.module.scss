@@ -15,3 +15,7 @@
 .input:focus {
     outline: 1.5px solid var(--primary-color);
 }
+
+.readOnly {
+    opacity: 0.7;
+}

@@ -42,9 +42,9 @@ export const Header = memo(({ className }: HeaderProps) => {
     const authData = useSelector(getUserAuthData);
     const dispatch = useAppDispatch();
 
-    const onLoginClickHandler = () => {
+    const onLoginClickHandler = useCallback(() => {
         navigate(RoutePath.LOGIN)
-    }
+    }, [navigate])
 
     const onLogoutClickHandler = useCallback(() => {
         dispatch(userActions.logout());
