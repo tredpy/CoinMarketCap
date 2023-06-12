@@ -1,10 +1,24 @@
 .ProfileCard {
     padding: 20px;
     border: 1px solid var(--bg-dark);
+    display: flex;
+    justify-content: space-between;
+}
+
+.data {
+    width: 80%;
 }
 
 .item {
     margin-top: 10px;
+}
+
+.item:first-child {
+    margin-top: 0;
+}
+
+.avatar {
+    margin-top: 15px;
 }
 
 .loading,
@@ -13,12 +27,6 @@
     align-items: center;
     justify-content: center;
     height: 300px;
-}
-
-.avatarWrapper {
-    display: flex;
-    width: 100%;
-    justify-content: center;
 }
 
 .editing {

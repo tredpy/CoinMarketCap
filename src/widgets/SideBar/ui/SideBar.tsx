@@ -19,7 +19,7 @@ export const SideBar = memo(({ className }: SideBarProps) => {
 
     const [collapsed, setCollapsed] = useState(false);
 
-    const onToggle = () => {
+    const onToggleCollapse = () => {
         setCollapsed((prev) => !prev);
     };
 
@@ -33,7 +33,7 @@ export const SideBar = memo(({ className }: SideBarProps) => {
                     data-testid="SideBarCollapseToggle"
                     view={'clear'}
                     size={'M'}
-                    onClick={onToggle}
+                    onClick={onToggleCollapse}
                     className={s.collapseBtn}
                 >
                     {
@@ -44,7 +44,7 @@ export const SideBar = memo(({ className }: SideBarProps) => {
                     data-testid="SideBarCollapseToggle"
                     view={'clear'}
                     size={'M'}
-                    onClick={onToggle}
+                    onClick={onToggleCollapse}
                     className={s.collapseBtn}
                 >
                     {

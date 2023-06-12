@@ -12,7 +12,7 @@ interface LangSwitcherProps {
 export const LangSwitcher = memo(({ className }: LangSwitcherProps) => {
     const { t, i18n } = useTranslation();
 
-    const toggleLang = () => {
+    const onToggleLang = () => {
         void i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
     };
 
@@ -22,7 +22,7 @@ export const LangSwitcher = memo(({ className }: LangSwitcherProps) => {
             className={classNames('', {}, [className])}
             view={'clear'}
             size={'M'}
-            onClick={toggleLang}
+            onClick={onToggleLang}
         >
             {t('Русский')}
         </Button>

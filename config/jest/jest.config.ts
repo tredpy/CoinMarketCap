@@ -3,9 +3,6 @@ import path from 'path';
 export default {
     clearMocks: true,
     testEnvironment: 'jsdom',
-    coveragePathIgnorePatterns: [
-        '\\\\node_modules\\\\'
-    ],
     moduleFileExtensions: [
         'js',
         'jsx',
@@ -18,8 +15,12 @@ export default {
         'node_modules',
         'src'
     ],
+    rootDir: '../../',
     modulePaths: [
         '<rootDir>src'
+    ],
+    coveragePathIgnorePatterns: [
+        '\\\\node_modules\\\\'
     ],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
@@ -28,8 +29,9 @@ export default {
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
     ],
-    rootDir: '../../',
-    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    setupFilesAfterEnv: [
+        '<rootDir>config/jest/setupTests.ts'
+    ],
     globals: {
         __IS_DEV__: true,
         __API__: ''

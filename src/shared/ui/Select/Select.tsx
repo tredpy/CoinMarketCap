@@ -11,7 +11,6 @@ export interface SelectOption {
 
 interface SelectProps {
     className?: string
-    label?: string
     options?: SelectOption[]
     value?: string
     onChange?: (value: string) => void
@@ -21,7 +20,6 @@ interface SelectProps {
 export const Select = memo((props: SelectProps) => {
     const {
         className,
-        label,
         options,
         onChange,
         value,
@@ -45,20 +43,13 @@ export const Select = memo((props: SelectProps) => {
     )), [options]);
 
     return (
-        <div className={classNames(s.Wrapper, {}, [className])}>
-            {label && (
-                <span className={s.label}>
-                    {`${label}`}
-                </span>
-            )}
-            <select
-                disabled={readOnly}
-                className={s.select}
-                value={value}
-                onChange={onChangeHandler}
-            >
-                {optionsList}
-            </select>
-        </div>
+        <select
+            disabled={readOnly}
+            className={classNames(s.select, {}, [className])}
+            value={value}
+            onChange={onChangeHandler}
+        >
+            {optionsList}
+        </select>
     );
 });

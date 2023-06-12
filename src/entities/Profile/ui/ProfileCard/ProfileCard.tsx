@@ -1,10 +1,5 @@
 import { Profile } from '../../model/types/profile';
 
-import { Country } from 'entities/Country/model/types/country';
-import { Currency } from 'entities/Currency/model/types/currency';
-import { CurrencySelect } from 'entities/Currency';
-import { CountrySelect } from 'entities/Country';
-
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Input } from 'shared/ui/Input/Input';
@@ -25,8 +20,6 @@ interface ProfileCardProps {
     onChangeAge?: (value?: string) => void
     onChangeUsername?: (value?: string) => void
     onChangeAvatar?: (value?: string) => void
-    onChangeCurrency?: (currency: Currency) => void
-    onChangeCountry?: (country: Country) => void
 }
 
 export const ProfileCard = (props: ProfileCardProps) => {
@@ -39,9 +32,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChangeAge,
         onChangeCity,
         onChangeAvatar,
-        onChangeUsername,
-        onChangeCountry,
-        onChangeCurrency
+        onChangeUsername
     } = props;
 
     const { t } = useTranslation('profile');
@@ -59,6 +50,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
             <div className={classNames(s.ProfileCard, {}, [className, s.error])}>
                 <Text
                     view={'error'}
+                    size={'L'}
                     text={t('Произошла ошибка при загрузке профиля')}
                     align={'center'}
                 />
@@ -73,52 +65,58 @@ export const ProfileCard = (props: ProfileCardProps) => {
     return (
         <div className={classNames(s.ProfileCard, mods, [className])}>
             <div className={s.data}>
-                {data?.avatar && (
-                    <div className={s.avatarWrapper}>
-                        <Avatar src={data?.avatar} />
-                    </div>
-                )}
+                <Text
+                    text={t('Имя пользователя')}
+                    view={'primary'}
+                    readOnly={readOnly}
+                    className={s.item}
+                />
                 <Input
                     value={data?.username}
-                    placeholder={t('Имя пользователя')}
-                    className={s.item}
+                    placeholder={t('Введите имя пользователя')}
                     onChange={onChangeUsername}
                     readOnly={readOnly}
                 />
+                <Text
+                    text={t('Возраст')}
+                    view={'primary'}
+                    readOnly={readOnly}
+                    className={s.item}
+                />
                 <Input
                     value={data?.age}
-                    placeholder={t('Возраст')}
-                    className={s.item}
+                    placeholder={t('Введите возраст')}
                     onChange={onChangeAge}
                     readOnly={readOnly}
                 />
+                <Text
+                    text={t('Город')}
+                    view={'primary'}
+                    readOnly={readOnly}
+                    className={s.item}
+                />
                 <Input
                     value={data?.city}
-                    placeholder={t('Город')}
-                    className={s.item}
+                    placeholder={t('Введите город')}
                     onChange={onChangeCity}
                     readOnly={readOnly}
                 />
+                <Text
+                    text={t('Аватар')}
+                    view={'primary'}
+                    readOnly={readOnly}
+                    className={s.item}
+                />
                 <Input
                     value={data?.avatar}
-                    placeholder={t('Аватар')}
-                    className={s.item}
+                    placeholder={t('Введите сылку на аватар')}
                     onChange={onChangeAvatar}
                     readOnly={readOnly}
                 />
-                <CurrencySelect
-                    className={s.item}
-                    value={data?.currency}
-                    onChange={onChangeCurrency}
-                    readOnly={readOnly}
-                />
-                <CountrySelect
-                    className={s.item}
-                    value={data?.country}
-                    onChange={onChangeCountry}
-                    readOnly={readOnly}
-                />
             </div>
+            {data?.avatar && (
+                <Avatar src={data?.avatar} className={s.avatar}/>
+            )}
         </div>
     );
 };

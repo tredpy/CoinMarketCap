@@ -14,7 +14,7 @@ interface ErrorThrowerProps {
 
 export const ErrorThrower = memo(({ className }: ErrorThrowerProps) => {
     const { t } = useTranslation();
-    const reloadPage = () => {
+    const onReloadPage = () => {
         window.location.reload();
     };
 
@@ -29,7 +29,7 @@ export const ErrorThrower = memo(({ className }: ErrorThrowerProps) => {
                 className={s.title}
             />
             <Button
-                onClick={reloadPage}
+                onClick={onReloadPage}
                 view={'background'}
                 size={'L'}
                 className={s.reloadBtn}

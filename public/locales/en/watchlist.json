@@ -1,3 +1,15 @@
 {
-  "Избранное": "Watchlist"
+  "Избранное": "Watchlist",
+  "Зарегистрируйтесь сегодня и создайте": "Sign up Today and get",
+  "свой собственный список Избранных криптовалют": "your own crypto Watchlist",
+  "Создать Список": "Create Watchlist",
+  "Войти": "Log In",
+  "Просматривайте графики": {
+    " Отслеживайте прибыль и убытки": {
+      "": "View your charts. Track your profits and losses."
+    }
+  },
+  "Делайте все это с помощью нашей простой в использовании платформы": {
+    "": "Do it all with our easy-to-use platform."
+  }
 }

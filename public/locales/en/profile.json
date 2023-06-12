@@ -9,5 +9,21 @@
   "Страна": "Country",
   "Произошла ошибка при загрузке профиля": "An error occurred while loading the profile",
   "Отменить": "Cancel",
-  "Сохранить": "Save"
+  "Сохранить": "Save",
+  "Введите имя пользователя": "Enter your username",
+  "Введите возраст": "Enter your age",
+  "Введите город": "Enter your city",
+  "Введите сылку на аватар": "Enter your avatar link",
+  "Зарегистрируйтесь сегодня и создайте": "Sign up today and get",
+  "свой собственный Профиль": "your own Profile",
+  "Создать Профиль": "Create Profile",
+  "Войти": "Log In",
+  "Отслеживайте криптовалюту": {
+    " Ведите собственный портфель": {
+      "": "Track your cryptocurrency. Keep track of your own portfolio."
+    }
+  },
+  "Делайте все это с помощью нашей простой в использовании платформы": {
+    "": "Do it all with our easy-to-use platform."
+  }
 }

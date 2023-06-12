@@ -1,3 +1,12 @@
 {
-  "Портфель": "Portfolio"
+  "Зарегистрируйтесь сегодня и создайте": "Sign up Today and get",
+  "свой собственный Криптопортфель": "your own crypto Portfolio",
+  "Войти": "Log In",
+  "Создать Портфель": "Create Portfolio",
+  "Отслеживайте свою прибыль, убытки и стоимость портфеля": {
+    "": "Keep track of your profits, losses and portfolio valuation."
+  },
+  "Делайте все это с помощью нашей простой в использовании платформы": {
+    "": "Do it all with our easy-to-use platform."
+  }
 }

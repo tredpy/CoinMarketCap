@@ -6,6 +6,10 @@
     color: var(--secondary-color);
 }
 
+.dark {
+    color: var(--placeholder);
+}
+
 .error {
     color: var(--color-error);
 }
@@ -18,6 +22,10 @@
     font: var(--font-l);
 }
 
+.XL {
+    font: var(--font-xl);
+}
+
 .left {
     text-align: left;
 }
@@ -28,4 +36,8 @@
 
 .center {
     text-align: center;
+}
+
+.readOnly {
+    opacity: 0.7;
 }

@@ -5,6 +5,7 @@ import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import s from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
+
 interface InputProps extends HTMLInputProps {
     className?: string
     value?: string | number
@@ -36,16 +37,12 @@ export const Input = memo((props: InputProps) => {
             data-testid="Input"
             className={classNames(s.Input, mods, [className])}
         >
-            {placeholder && (
-                <div className={s.placeholder}>
-                    {`${placeholder}`}
-                </div>
-            )}
             <input
                 className={s.input}
                 type={type}
                 value={value}
                 onChange={onChangeHandler}
+                placeholder={placeholder}
                 readOnly={readOnly}
                 {...otherProps}
             />

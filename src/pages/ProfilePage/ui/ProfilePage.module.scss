@@ -1,0 +1,33 @@
+.Profile {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    margin-top: 10px;
+}
+
+.text:first-child {
+    margin-top: 0;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+}
+
+.btn {
+    margin-left: 10px;
+}
+
+.btn:first-child {
+    margin-left: 0;
+}

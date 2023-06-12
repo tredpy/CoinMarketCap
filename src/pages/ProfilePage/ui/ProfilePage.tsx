@@ -1,10 +1,10 @@
 import { memo, useEffect, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
 
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
+import { getUserAuthData } from 'entities/User';
 import {
     fetchProfileData,
     getProfileError,
@@ -16,9 +16,16 @@ import {
     profileReducer
 } from 'entities/Profile';
 
+import { RoutePath } from 'shared/config/routes/routes';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Button } from 'shared/ui/Button/Button';
+import { Text } from 'shared/ui/Text/Text';
+
+import { useTranslation } from 'react-i18next';
+
+import s from './ProfilePage.module.scss'
 
 const reducers: ReducersList = {
     profile: profileReducer
@@ -29,6 +36,12 @@ interface ProfilePageProps {
 }
 
 const ProfilePage = memo(({ className }: ProfilePageProps) => {
+    const { t } = useTranslation('profile');
+
+    const authData = useSelector(getUserAuthData)
+
+    const navigate = useNavigate()
+
     const dispatch = useAppDispatch();
     const formData = useSelector(getProfileForm);
     const isLoading = useSelector(getProfileIsLoading);
@@ -55,35 +68,82 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
         dispatch(profileActions.updateProfile({ avatar: value || '' }));
     }, [dispatch]);
 
-    const onChangeCurrency = useCallback((currency: Currency) => {
-        dispatch(profileActions.updateProfile({ currency }));
-    }, [dispatch]);
+    const onLogin = useCallback(() => {
+        navigate(RoutePath.LOGIN)
+    }, [navigate])
 
-    const onChangeCountry = useCallback((country: Country) => {
-        dispatch(profileActions.updateProfile({ country }));
-    }, [dispatch]);
+    if (authData) {
+        return (
+            <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+                <div
+                    data-testid="ProfilePage"
+                    className={classNames('', {}, [className])}
+                >
+                    <ProfilePageHeader/>
+                    <ProfileCard
+                        data={formData}
+                        isLoading={isLoading}
+                        error={error}
+                        readOnly={readOnly}
+                        onChangeAge={onChangeAge}
+                        onChangeCity={onChangeCity}
+                        onChangeUsername={onChangeUsername}
+                        onChangeAvatar={onChangeAvatar}
+                    />
+                </div>
+            </DynamicModuleLoader>
+        );
+    }
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div
-                data-testid="ProfilePage"
-                className={classNames('', {}, [className])}
-            >
-                <ProfilePageHeader />
-                <ProfileCard
-                    data={formData}
-                    isLoading={isLoading}
-                    error={error}
-                    readOnly={readOnly}
-                    onChangeAge={onChangeAge}
-                    onChangeCity={onChangeCity}
-                    onChangeUsername={onChangeUsername}
-                    onChangeAvatar={onChangeAvatar}
-                    onChangeCurrency={onChangeCurrency}
-                    onChangeCountry={onChangeCountry}
+        <div
+            data-testid="ProfilePage"
+            className={classNames(s.Profile, {}, [className])}
+        >
+            <div className={s.wrapper}>
+                <Text
+                    view={'primary'}
+                    size={'L'}
+                    text={t('Зарегистрируйтесь сегодня и создайте')}
+                    className={s.text}
                 />
+                <Text
+                    view={'light'}
+                    size={'L'}
+                    text={t('свой собственный Профиль')}
+                    className={s.text}
+                />
+                <Text
+                    view={'dark'}
+                    align={'center'}
+                    text={t('Отслеживайте криптовалюту. Ведите собственный портфель.')}
+                    className={s.text}
+                />
+                <Text
+                    view={'dark'}
+                    align={'center'}
+                    text={t('Делайте все это с помощью нашей простой в использовании платформы.')}
+                />
+                <div className={s.buttons}>
+                    <Button
+                        view={'background'}
+                        size={'L'}
+                        onClick={onLogin}
+                        className={s.btn}
+                    >
+                        {t('Создать Профиль')}
+                    </Button>
+                    <Button
+                        view={'border'}
+                        size={'L'}
+                        onClick={onLogin}
+                        className={s.btn}
+                    >
+                        {t('Войти')}
+                    </Button>
+                </div>
             </div>
-        </DynamicModuleLoader>
+        </div>
     );
 });
 

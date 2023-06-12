@@ -42,11 +42,11 @@ export const Header = memo(({ className }: HeaderProps) => {
     const authData = useSelector(getUserAuthData);
     const dispatch = useAppDispatch();
 
-    const onLoginClickHandler = useCallback(() => {
+    const onLogin = useCallback(() => {
         navigate(RoutePath.LOGIN)
     }, [navigate])
 
-    const onLogoutClickHandler = useCallback(() => {
+    const onLogout = useCallback(() => {
         dispatch(userActions.logout());
     }, [dispatch])
 
@@ -69,7 +69,7 @@ export const Header = memo(({ className }: HeaderProps) => {
                         view={'border'}
                         size={'M'}
                         className={s.item}
-                        onClick={onLogoutClickHandler}
+                        onClick={onLogout}
                     >
                         {t('Выйти')}
                     </Button>
@@ -95,7 +95,7 @@ export const Header = memo(({ className }: HeaderProps) => {
                     view={'border'}
                     size={'M'}
                     className={s.item}
-                    onClick={onLoginClickHandler}
+                    onClick={onLogin}
                 >
                     {t('Вход')}
                 </Button>
