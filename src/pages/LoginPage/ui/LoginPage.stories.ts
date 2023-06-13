@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import LoginPage from './LoginPage';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { ThemeDecorator } from 'libs/storybook/ThemeDecorator/ThemeDecorator';
+import { StoreDecorator } from 'libs/storybook/StoreDecorator/StoreDecorator';
 
 const meta = {
     title: 'pages/LoginPage',

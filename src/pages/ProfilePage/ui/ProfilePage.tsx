@@ -2,9 +2,9 @@ import { memo, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import { ProfilePageHeader } from './ProfilePageHeader/ProfilePageHeader';
+import { ProfileHeader } from 'components/ProfileHeader/ProfileHeader';
 
-import { getUserAuthData } from 'entities/User';
+import { getUserAuthData } from 'store/User';
 import {
     fetchProfileData,
     getProfileError,
@@ -14,14 +14,15 @@ import {
     ProfileCard,
     profileActions,
     profileReducer
-} from 'entities/Profile';
+} from 'store/Profile';
 
-import { RoutePath } from 'shared/config/routes/routes';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Button } from 'shared/ui/Button/Button';
-import { Text } from 'shared/ui/Text/Text';
+import { RoutePath } from 'routes/RouteConfig/RouteConfig';
+import { DynamicModuleLoader, ReducersList } from 'utils/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';
+import { classNames } from 'helpers/classNames/classNames';
+
+import { Button } from 'ui/Button/Button';
+import { Text } from 'ui/Text/Text';
 
 import { useTranslation } from 'react-i18next';
 
@@ -79,7 +80,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
                     data-testid="ProfilePage"
                     className={classNames('', {}, [className])}
                 >
-                    <ProfilePageHeader/>
+                    <ProfileHeader/>
                     <ProfileCard
                         data={formData}
                         isLoading={isLoading}

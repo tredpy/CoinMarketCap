@@ -24,7 +24,7 @@ jobs:
       - name: Linting Typescript
         run: npm run lint:ts
         if: always()
-      - name: Linting Css
+      - name: Linting CSS
         run: npm run lint:css
         if: always()
       - name: Unit Testing

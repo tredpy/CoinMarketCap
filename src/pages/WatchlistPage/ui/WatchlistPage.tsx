@@ -1,10 +1,11 @@
 import { memo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { RoutePath } from 'shared/config/routes/routes';
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Button } from 'shared/ui/Button/Button';
-import { Text } from 'shared/ui/Text/Text';
+import { classNames } from 'helpers/classNames/classNames';
+import { RoutePath } from 'routes/RouteConfig/RouteConfig';
+
+import { Button } from 'ui/Button/Button';
+import { Text } from 'ui/Text/Text';
 
 import { useTranslation } from 'react-i18next';
 

@@ -1,14 +1,15 @@
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
-import { StoreProvider } from 'app/providers/StoreProvider';
-import { ErrorBoundary } from 'app/providers/ErrorBoundary';
-import { ThemeProvider } from 'app/providers/ThemeProvider';
-import { App } from 'app/App';
+import { App } from './App';
 
-import './shared/config/i18n/i18n';
+import { StoreProvider } from 'store/StoreProvider';
+import { ErrorBoundary } from 'utils/ErrorBoundary/ErrorBoundary';
+import { ThemeProvider } from 'utils/ThemeProvider/ThemeProvider';
 
-const container = document.getElementById('root') as HTMLElement;
+import 'libs/i18n/i18n';
+
+const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 root.render(

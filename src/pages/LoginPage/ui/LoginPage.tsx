@@ -1,8 +1,8 @@
 import { memo } from 'react';
 
-import { LoginForm } from 'features/AuthByUserName';
+import { LoginForm } from 'store/AuthByUserName';
 
-import { Text } from 'shared/ui/Text/Text';
+import { Text } from 'ui/Text/Text'
 
 import { useTranslation } from 'react-i18next';
 

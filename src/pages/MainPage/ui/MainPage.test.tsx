@@ -1,8 +1,6 @@
 import { screen } from '@testing-library/react';
 
-import {
-    componentRender
-} from 'shared/lib/tests/componentRender/componentRender';
+import { componentRender } from 'tests/componentRender/componentRender';
 
 import MainPage from './MainPage';
 

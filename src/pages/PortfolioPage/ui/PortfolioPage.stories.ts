@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import PortfolioPage from './PortfolioPage';
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { ThemeDecorator } from 'libs/storybook/ThemeDecorator/ThemeDecorator';
 
 const meta = {
     title: 'pages/PortfolioPage',

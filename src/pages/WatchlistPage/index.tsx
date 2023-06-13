@@ -1,3 +1,3 @@
 import { WatchlistPageAsync } from './ui/WatchlistPage.async';
 
-export { WatchlistPageAsync as WatchlistPage };
+export { WatchlistPageAsync as WatchlistPage }
