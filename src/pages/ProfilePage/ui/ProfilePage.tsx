@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import { ProfileHeader } from 'components/ProfileHeader/ProfileHeader';
+import { ProfileCard } from 'components/ProfileCard/ProfileCard';
 
 import { getUserAuthData } from 'store/User';
 import {
@@ -11,15 +12,14 @@ import {
     getProfileForm,
     getProfileIsLoading,
     getProfileReadOnly,
-    ProfileCard,
     profileActions,
     profileReducer
 } from 'store/Profile';
 
-import { RoutePath } from 'routes/RouteConfig/RouteConfig';
 import { DynamicModuleLoader, ReducersList } from 'utils/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';
 import { classNames } from 'helpers/classNames/classNames';
+import { RoutePath } from 'routes/RouteConfig/RouteConfig';
 
 import { Button } from 'ui/Button/Button';
 import { Text } from 'ui/Text/Text';

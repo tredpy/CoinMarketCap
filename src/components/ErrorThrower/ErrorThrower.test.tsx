@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
 
-import { componentRender } from 'tests/componentRender/componentRender';
+import { ComponentRender } from 'tests/ComponentRender/ComponentRender';
 
 import { ErrorThrower } from './ErrorThrower';
 
 describe('ErrorThrower', () => {
     test('Render test', () => {
-        componentRender(<ErrorThrower/>);
+        ComponentRender(<ErrorThrower/>);
         expect(screen.getByTestId('ErrorThrower')).toBeInTheDocument();
     });
 });

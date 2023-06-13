@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { App } from './App';
 
-import { StoreProvider } from 'store/StoreProvider';
+import { StoreProvider } from 'utils/StoreProvider/StoreProvider';
 import { ErrorBoundary } from 'utils/ErrorBoundary/ErrorBoundary';
 import { ThemeProvider } from 'utils/ThemeProvider/ThemeProvider';
 

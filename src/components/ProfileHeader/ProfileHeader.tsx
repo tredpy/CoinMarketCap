@@ -1,7 +1,11 @@
 import { useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
-import { getProfileReadOnly, profileActions, updateProfileData } from 'store/Profile';
+import {
+    getProfileReadOnly,
+    updateProfileData,
+    profileActions
+} from 'store/Profile';
 
 import { classNames } from 'helpers/classNames/classNames';
 import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';

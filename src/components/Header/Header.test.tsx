@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
 
-import { componentRender } from 'tests/componentRender/componentRender';
+import { ComponentRender } from 'tests/ComponentRender/ComponentRender';
 
 import { Header } from './Header';
 
 describe('Header', () => {
     test('Render test', () => {
-        componentRender(<Header/>);
+        ComponentRender(<Header/>);
         expect(screen.getByTestId('Header')).toBeInTheDocument();
     });
 });

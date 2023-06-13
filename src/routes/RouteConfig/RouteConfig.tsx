@@ -7,7 +7,7 @@ import { ProfilePage } from 'pages/ProfilePage';
 import { LoginPage } from 'pages/LoginPage';
 import { MainPage } from 'pages/MainPage';
 
-export type AppRoutes = 'MAIN' | 'PROFILE' | 'PORTFOLIO' | 'WATCHLIST' | 'LOGIN' | 'NOT_FOUND'
+type AppRoutes = 'MAIN' | 'PROFILE' | 'PORTFOLIO' | 'WATCHLIST' | 'LOGIN' | 'NOT_FOUND'
 
 export const RoutePath: Record<AppRoutes, string> = {
     MAIN: '/',

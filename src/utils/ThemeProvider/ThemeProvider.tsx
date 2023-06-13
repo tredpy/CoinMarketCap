@@ -4,10 +4,12 @@ import { Theme, ThemeContext } from '../ThemeContext/ThemeContext';
 import { THEME_LOCALSTORAGE_KEY } from 'const/localStorage';
 
 const defaultTheme = localStorage.getItem(THEME_LOCALSTORAGE_KEY) as Theme || 'light';
+
 interface ThemeProviderProps {
     initialTheme?: Theme
     children: ReactNode
 }
+
 export const ThemeProvider = (props: ThemeProviderProps) => {
     const {
         initialTheme,

@@ -1,4 +1,4 @@
-import { Profile } from '../../model/types/profile';
+import { Profile } from 'store/Profile/model/types/profile';
 
 import { classNames, Mods } from 'helpers/classNames/classNames';
 

@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
 
-import { componentRender } from 'tests/componentRender/componentRender';
+import { ComponentRender } from 'tests/ComponentRender/ComponentRender';
 
 import PortfolioPage from './PortfolioPage';
 
 describe('PortfolioPage', () => {
     test('Render test', () => {
-        componentRender(<PortfolioPage/>);
+        ComponentRender(<PortfolioPage/>);
         expect(screen.getByTestId('PortfolioPage')).toBeInTheDocument();
     });
 });

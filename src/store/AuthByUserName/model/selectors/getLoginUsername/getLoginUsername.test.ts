@@ -1,4 +1,4 @@
-import { StateSchema } from '../../../../StoreProvider';
+import { StateSchema } from '../../../../Store';
 
 import { getLoginUsername } from './getLoginUsername';
 

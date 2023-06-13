@@ -1,10 +1,11 @@
 import { Decorator } from '@storybook/react';
 
-import { StateSchema, StoreProvider } from 'store/StoreProvider';
+import { StateSchema } from 'store/Store';
 import { loginReducer } from 'store/AuthByUserName';
 import { profileReducer } from 'store/Profile';
 
 import { ReducersList } from 'utils/DynamicModuleLoader/DynamicModuleLoader';
+import { StoreProvider } from 'utils/StoreProvider/StoreProvider';
 
 const defaultAsyncReducers: ReducersList = {
     loginForm: loginReducer,

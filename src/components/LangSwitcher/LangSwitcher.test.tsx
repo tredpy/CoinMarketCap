@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
 
-import { componentRender } from 'tests/componentRender/componentRender';
+import { ComponentRender } from 'tests/ComponentRender/ComponentRender';
 
 import { LangSwitcher } from './LangSwitcher';
 
 describe('LangSwitcher', () => {
     test('Render test', () => {
-        componentRender(<LangSwitcher/>);
+        ComponentRender(<LangSwitcher/>);
         expect(screen.getByTestId('LangSwitcher')).toBeInTheDocument();
     });
 });

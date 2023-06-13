@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
 
-import { componentRender } from 'tests/componentRender/componentRender';
+import { ComponentRender } from 'tests/ComponentRender/ComponentRender';
 
 import { NotFoundPage } from './NotFoundPage';
 
 describe('NotFoundPage', () => {
     test('Render test', () => {
-        componentRender(<NotFoundPage/>);
+        ComponentRender(<NotFoundPage/>);
         expect(screen.getByTestId('NotFoundPage')).toBeInTheDocument();
     });
 });

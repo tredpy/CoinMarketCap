@@ -2,12 +2,15 @@ import { memo, useCallback } from 'react';
 
 import { useSelector } from 'react-redux';
 
-import { loginActions, loginReducer } from '../../model/slice/loginSlice';
-import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername';
-import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword';
-import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading';
-import { getLoginError } from '../../model/selectors/getLoginError/getLoginError';
-import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername';
+import {
+    loginActions,
+    loginReducer,
+    getLoginUsername,
+    getLoginPassword,
+    getLoginIsLoading,
+    getLoginError,
+    loginByUsername
+} from 'store/AuthByUserName';
 
 import { DynamicModuleLoader, ReducersList } from 'utils/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';

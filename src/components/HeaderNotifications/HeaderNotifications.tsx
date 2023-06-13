@@ -1,7 +1,5 @@
 import { memo, useCallback, useState } from 'react';
 
-import { Counter } from 'store/Counter';
-
 import { classNames } from 'helpers/classNames/classNames';
 import { useTheme } from 'hooks/useTheme/useTheme';
 
@@ -48,7 +46,7 @@ export const HeaderNotifications = memo(({ className }: NotificationsProps) => {
                     isOpen={notificationModal}
                     onClose={onToggleModal}
                 >
-                    <Counter/>
+                    <Button>YES</Button>
                 </Modal>
             )}
         </div>

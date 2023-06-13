@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
 
-import { componentRender } from 'tests/componentRender/componentRender';
+import { ComponentRender } from 'tests/ComponentRender/ComponentRender';
 
 import WatchlistPage from './WatchlistPage';
 
 describe('WatchlistPage', () => {
     test('Render test', () => {
-        componentRender(<WatchlistPage/>);
+        ComponentRender(<WatchlistPage/>);
         expect(screen.getByTestId('WatchlistPage')).toBeInTheDocument();
     });
 });

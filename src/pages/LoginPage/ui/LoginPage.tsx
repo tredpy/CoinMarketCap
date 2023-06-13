@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import { LoginForm } from 'store/AuthByUserName';
+import { LoginForm } from 'components/LoginForm/LoginForm';
 
 import { Text } from 'ui/Text/Text'
 
