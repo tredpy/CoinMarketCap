@@ -6,12 +6,14 @@ import { ProfileHeader } from 'components/ProfileHeader/ProfileHeader';
 import { ProfileCard } from 'components/ProfileCard/ProfileCard';
 
 import { getUserAuthData } from 'store/User';
+import { ValidateProfileError } from 'store/Profile/model/types/profile';
 import {
     fetchProfileData,
     getProfileError,
     getProfileForm,
     getProfileIsLoading,
     getProfileReadOnly,
+    getProfileValidateErrors,
     profileActions,
     profileReducer
 } from 'store/Profile';
@@ -48,9 +50,20 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
     const isLoading = useSelector(getProfileIsLoading);
     const error = useSelector(getProfileError);
     const readOnly = useSelector(getProfileReadOnly);
+    const validateErrors = useSelector(getProfileValidateErrors);
+
+    const validateErrorTranslates = {
+        [ValidateProfileError.NO_DATA]: t('Заполните все поля'),
+        [ValidateProfileError.INCORRECT_USER_DATA]: t('Укажите имя пользователя'),
+        [ValidateProfileError.INCORRECT_CITY]: t('Укажите ваш город'),
+        [ValidateProfileError.INCORRECT_AGE]: t('Некорректный возраст'),
+        [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении')
+    };
 
     useEffect(() => {
-        dispatch(fetchProfileData());
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData());
+        }
     }, [dispatch]);
 
     const onChangeCity = useCallback((value?: string) => {
@@ -81,6 +94,13 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
                     className={classNames('', {}, [className])}
                 >
                     <ProfileHeader/>
+                    {validateErrors?.length && validateErrors.map((err) => (
+                        <Text
+                            key={err}
+                            view={'error'}
+                            text={validateErrorTranslates[err]}
+                        />
+                    ))}
                     <ProfileCard
                         data={formData}
                         isLoading={isLoading}

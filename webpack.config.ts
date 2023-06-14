@@ -23,7 +23,8 @@ export default (env: BuildEnv) => {
         isDev,
         port,
         analyze,
-        apiUrl
+        apiUrl,
+        project: 'development'
     });
 
     return config;

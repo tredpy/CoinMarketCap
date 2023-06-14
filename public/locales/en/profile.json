@@ -25,5 +25,10 @@
   },
   "Делайте все это с помощью нашей простой в использовании платформы": {
     "": "Do it all with our easy-to-use platform."
-  }
+  },
+  "Заполните все поля": "Fill in all the fields",
+  "Укажите имя пользователя": "Fill the username",
+  "Укажите ваш город": "Fill the city",
+  "Некорректный возраст": "Incorrect age",
+  "Серверная ошибка при сохранении": "Server error when saving"
 }

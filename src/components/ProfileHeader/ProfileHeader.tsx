@@ -32,7 +32,7 @@ export const ProfileHeader = (props: ProfileHeaderProps) => {
     const dispatch = useAppDispatch();
 
     const onEdit = useCallback(() => {
-        dispatch(profileActions.setReadonly(false));
+        dispatch(profileActions.setReadOnly(false));
     }, [dispatch]);
 
     const onCancelEdit = useCallback(() => {
