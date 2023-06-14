@@ -50,7 +50,7 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
         dispatch(loginActions.setPassword(value));
     }, [dispatch]);
 
-    const onLoginClick = useCallback(() => {
+    const onLogin = useCallback(() => {
         dispatch(loginByUsername({ username, password }));
     }, [dispatch, password, username]);
 
@@ -92,7 +92,7 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
                 <Button
                     view={'background'}
                     size={'L'}
-                    onClick={onLoginClick}
+                    onClick={onLogin}
                     disabled={isLoading}
                     className={s.btn}
                 >

@@ -20,7 +20,7 @@ export const NotFoundPage = memo(({ className }: NotFoundPageProps) => {
 
     const navigate = useNavigate()
 
-    const onBackToHomepageClickHandler = () => {
+    const onBackToHomepage = () => {
         navigate(RoutePath.MAIN)
     }
 
@@ -45,7 +45,7 @@ export const NotFoundPage = memo(({ className }: NotFoundPageProps) => {
                 view={'border'}
                 size={'L'}
                 className={s.item}
-                onClick={onBackToHomepageClickHandler}
+                onClick={onBackToHomepage}
             >
                 {t('Вернуться на Главную')}
             </Button>

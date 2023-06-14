@@ -17,9 +17,9 @@ interface ProfileCardProps {
     error?: string
     isLoading?: boolean
     readOnly?: boolean
-    onChangeCity?: (value?: string) => void
-    onChangeAge?: (value?: string) => void
     onChangeUsername?: (value?: string) => void
+    onChangeAge?: (value?: string) => void
+    onChangeCity?: (value?: string) => void
     onChangeAvatar?: (value?: string) => void
 }
 
@@ -27,13 +27,13 @@ export const ProfileCard = (props: ProfileCardProps) => {
     const {
         className,
         data,
-        isLoading,
         error,
+        isLoading,
         readOnly,
+        onChangeUsername,
         onChangeAge,
         onChangeCity,
-        onChangeAvatar,
-        onChangeUsername
+        onChangeAvatar
     } = props;
 
     const { t } = useTranslation('profile');
