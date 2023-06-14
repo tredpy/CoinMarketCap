@@ -12,6 +12,7 @@
     "paths": {
       "components/*": ["components/*"],
       "helpers/*": ["helpers/*"],
+      "context/*": ["context/*"],
       "assets/*": ["assets/*"],
       "routes/*": ["routes/*"],
       "const/*": ["const/*"],

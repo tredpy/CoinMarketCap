@@ -2,7 +2,7 @@ import { Decorator } from '@storybook/react';
 
 import { ThemeProvider } from 'utils/ThemeProvider/ThemeProvider';
 
-import { Theme } from 'utils/ThemeContext/ThemeContext';
+import { Theme } from 'context/ThemeContext/ThemeContext';
 
 export const ThemeDecorator = (theme: Theme): Decorator => (Story) => (
     <ThemeProvider initialTheme={theme}>

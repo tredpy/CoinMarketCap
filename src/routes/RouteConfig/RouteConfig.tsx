@@ -13,13 +13,13 @@ export type AppRoutesProps = RouteProps & {
 }
 
 type AppRoutes =
-    'MAIN' |
-    'PROFILE' |
-    'PORTFOLIO' |
-    'WATCHLIST' |
-    'LOGIN' |
-    'CURRENCY' |
-    'NOT_FOUND'
+    | 'MAIN'
+    | 'PROFILE'
+    | 'PORTFOLIO'
+    | 'WATCHLIST'
+    | 'LOGIN'
+    | 'CURRENCY'
+    | 'NOT_FOUND'
 
 export const RoutePath: Record<AppRoutes, string> = {
     MAIN: '/',

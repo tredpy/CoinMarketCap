@@ -3,16 +3,13 @@
         Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
         sans-serif;
     --font-size-m: calc(10px + 0.33vw);
-    --font-line-m: 1.5vw;
+    --font-line-m: calc(10px + 0.33vw);
     --font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
     --font-size-l: calc(10px + 0.99vw);
-    --font-line-l: 2.5vw;
+    --font-line-l: calc(10px + 0.99vw);
     --font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
-    --font-size-xl: calc(15px + 0.99vw);
-    --font-line-xl: 2.5vw;
-    --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
     --header-height: calc(40px + 1vw);
-    --sidebar-width: calc(45px + 10vw);
+    --sidebar-width: calc(50px + 10vw);
     --sidebar-width-collapsed: calc(10px + 2.5vw);
     --color-error: #f00;
 }
