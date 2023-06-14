@@ -7,6 +7,10 @@ import { ProfilePage } from 'pages/ProfilePage';
 import { LoginPage } from 'pages/LoginPage';
 import { MainPage } from 'pages/MainPage';
 
+export type AppRoutesProps = RouteProps & {
+    authOnly?: boolean
+}
+
 type AppRoutes = 'MAIN' | 'PROFILE' | 'PORTFOLIO' | 'WATCHLIST' | 'LOGIN' | 'NOT_FOUND'
 
 export const RoutePath: Record<AppRoutes, string> = {
@@ -18,7 +22,7 @@ export const RoutePath: Record<AppRoutes, string> = {
     NOT_FOUND: '*'
 };
 
-export const RouteConfig: Record<AppRoutes, RouteProps> = {
+export const RouteConfig: Record<AppRoutes, AppRoutesProps> = {
     MAIN: {
         path: RoutePath.MAIN,
         element: <MainPage/>

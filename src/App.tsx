@@ -1,6 +1,7 @@
 import { memo, Suspense, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
-import { userActions } from 'store/User';
+import { getUserInitiated, userActions } from 'store/User';
 
 import { AppRouter } from 'routes/AppRouter/AppRouter';
 
@@ -18,6 +19,7 @@ export const App = memo(() => {
     const { theme } = useTheme();
 
     const dispatch = useAppDispatch();
+    const initiated = useSelector(getUserInitiated);
 
     useEffect(() => {
         if (Math.random() < 0.1) {
@@ -35,7 +37,7 @@ export const App = memo(() => {
                 <Header/>
                 <div className='wrapper'>
                     <SideBar/>
-                    <AppRouter/>
+                    {initiated && <AppRouter/>}
                 </div>
             </Suspense>
         </div>
