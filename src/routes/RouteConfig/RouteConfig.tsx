@@ -3,6 +3,7 @@ import { RouteProps } from 'react-router-dom';
 import { NotFoundPage } from 'pages/NotFoundPage/NotFoundPage';
 import { PortfolioPage } from 'pages/PortfolioPage';
 import { WatchlistPage } from 'pages/WatchlistPage';
+import { CurrencyPage } from 'pages/CurrencyPage';
 import { ProfilePage } from 'pages/ProfilePage';
 import { LoginPage } from 'pages/LoginPage';
 import { MainPage } from 'pages/MainPage';
@@ -11,7 +12,14 @@ export type AppRoutesProps = RouteProps & {
     authOnly?: boolean
 }
 
-type AppRoutes = 'MAIN' | 'PROFILE' | 'PORTFOLIO' | 'WATCHLIST' | 'LOGIN' | 'NOT_FOUND'
+type AppRoutes =
+    'MAIN' |
+    'PROFILE' |
+    'PORTFOLIO' |
+    'WATCHLIST' |
+    'LOGIN' |
+    'CURRENCY' |
+    'NOT_FOUND'
 
 export const RoutePath: Record<AppRoutes, string> = {
     MAIN: '/',
@@ -19,6 +27,7 @@ export const RoutePath: Record<AppRoutes, string> = {
     PORTFOLIO: '/portfolio',
     WATCHLIST: '/watchlist',
     LOGIN: '/login',
+    CURRENCY: '/currency/',
     NOT_FOUND: '*'
 };
 
@@ -42,6 +51,10 @@ export const RouteConfig: Record<AppRoutes, AppRoutesProps> = {
     LOGIN: {
         path: RoutePath.LOGIN,
         element: <LoginPage/>
+    },
+    CURRENCY: {
+        path: `${RoutePath.CURRENCY}:id`,
+        element: <CurrencyPage/>
     },
     NOT_FOUND: {
         path: RoutePath.NOT_FOUND,
