@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
 import {
@@ -21,7 +21,7 @@ interface ProfileHeaderProps {
     className?: string
 }
 
-export const ProfileHeader = (props: ProfileHeaderProps) => {
+export const ProfileHeader = memo((props: ProfileHeaderProps) => {
     const {
         className
     } = props;
@@ -76,4 +76,4 @@ export const ProfileHeader = (props: ProfileHeaderProps) => {
                 )}
         </div>
     );
-};
+});

@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { Profile } from 'store/Profile/model/types/profile';
 
 import { classNames, Mods } from 'helpers/classNames/classNames';
@@ -23,7 +25,7 @@ interface ProfileCardProps {
     onChangeAvatar?: (value?: string) => void
 }
 
-export const ProfileCard = (props: ProfileCardProps) => {
+export const ProfileCard = memo((props: ProfileCardProps) => {
     const {
         className,
         data,
@@ -120,4 +122,4 @@ export const ProfileCard = (props: ProfileCardProps) => {
             )}
         </div>
     );
-};
+});

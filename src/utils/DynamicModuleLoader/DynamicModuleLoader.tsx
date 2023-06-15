@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from 'react';
+import { memo, ReactNode, useEffect } from 'react';
 import { useStore } from 'react-redux';
 import { Reducer } from '@reduxjs/toolkit';
 
@@ -16,7 +16,7 @@ interface DynamicModuleLoaderProps {
     children: ReactNode
 }
 
-export const DynamicModuleLoader = (props: DynamicModuleLoaderProps) => {
+export const DynamicModuleLoader = memo((props: DynamicModuleLoaderProps) => {
     const {
         children,
         reducers,
@@ -44,4 +44,4 @@ export const DynamicModuleLoader = (props: DynamicModuleLoaderProps) => {
     }, []);
 
     return <>{ children }</>
-};
+});
