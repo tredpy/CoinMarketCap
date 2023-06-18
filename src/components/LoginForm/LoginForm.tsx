@@ -10,7 +10,7 @@ import {
     getLoginIsLoading,
     getLoginError,
     loginByUsername
-} from 'store/AuthByUserName';
+} from 'store/LoginByUsername';
 
 import { DynamicModuleLoader, ReducersList } from 'utils/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';

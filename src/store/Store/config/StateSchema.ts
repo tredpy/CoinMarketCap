@@ -3,7 +3,7 @@ import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
 
 import { UserSchema } from '../../User';
-import { LoginSchema } from '../../AuthByUserName';
+import { LoginSchema } from '../../LoginByUsername';
 import { ProfileSchema } from '../../Profile';
 
 export interface StateSchema {

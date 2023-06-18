@@ -1,7 +1,7 @@
 import { Decorator } from '@storybook/react';
 
 import { StateSchema } from 'store/Store';
-import { loginReducer } from 'store/AuthByUserName';
+import { loginReducer } from 'store/LoginByUsername';
 import { profileReducer } from 'store/Profile';
 
 import { ReducersList } from 'utils/DynamicModuleLoader/DynamicModuleLoader';
