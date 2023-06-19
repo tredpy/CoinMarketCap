@@ -14,20 +14,20 @@ export type AppRoutesProps = RouteProps & {
 
 type AppRoutes =
     | 'MAIN'
+    | 'CURRENCY'
     | 'PROFILE'
     | 'PORTFOLIO'
     | 'WATCHLIST'
     | 'LOGIN'
-    | 'CURRENCY'
     | 'NOT_FOUND'
 
 export const RoutePath: Record<AppRoutes, string> = {
     MAIN: '/',
+    CURRENCY: '/',
     PROFILE: '/profile',
     PORTFOLIO: '/portfolio',
     WATCHLIST: '/watchlist',
     LOGIN: '/login',
-    CURRENCY: '/currency/',
     NOT_FOUND: '*'
 };
 
@@ -35,6 +35,10 @@ export const RouteConfig: Record<AppRoutes, AppRoutesProps> = {
     MAIN: {
         path: RoutePath.MAIN,
         element: <MainPage/>
+    },
+    CURRENCY: {
+        path: `${RoutePath.MAIN}:id`,
+        element: <CurrencyPage/>
     },
     PROFILE: {
         path: RoutePath.PROFILE,
@@ -51,10 +55,6 @@ export const RouteConfig: Record<AppRoutes, AppRoutesProps> = {
     LOGIN: {
         path: RoutePath.LOGIN,
         element: <LoginPage/>
-    },
-    CURRENCY: {
-        path: `${RoutePath.CURRENCY}:id`,
-        element: <CurrencyPage/>
     },
     NOT_FOUND: {
         path: RoutePath.NOT_FOUND,

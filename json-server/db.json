@@ -1,18 +1,4 @@
 {
-  "posts": [
-    {
-      "id": "1",
-      "title": "POST",
-      "userId": 1
-    }
-  ],
-  "comments": [
-    {
-      "id": "1",
-      "body": "COMMENT",
-      "postId": 1
-    }
-  ],
   "users": [
     {
       "id": "1",
@@ -23,10 +9,62 @@
   "profile": {
     "username": "Admin",
     "age": 33,
-    "country": "Russia",
     "city": "Moscow",
-    "avatar": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQaSUYUyPAttZ8pBp_zz9n5mg0Q7_kU6aImJSXeggAo9noAANSo",
-    "first": "Егор",
-    "lastname": "ы"
-  }
+    "avatar": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQaSUYUyPAttZ8pBp_zz9n5mg0Q7_kU6aImJSXeggAo9noAANSo"
+  },
+  "currency": [
+    {
+      "id": "1"
+    },
+    {
+      "id": "2"
+    },
+    {
+      "id": "3"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "some comment",
+      "currencyId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "text": "some comment 2",
+      "currencyId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "3",
+      "text": "some comment 3",
+      "currencyId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "4",
+      "text": "some comment",
+      "currencyId": "2",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "text": "some comment 2",
+      "currencyId": "2",
+      "userId": "1"
+    },
+    {
+      "id": "6",
+      "text": "some comment",
+      "currencyId": "3",
+      "userId": "1"
+    },
+    {
+      "id": "7",
+      "text": "some comment 2",
+      "currencyId": "3",
+      "userId": "1"
+    }
+  ]
 }

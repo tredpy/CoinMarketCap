@@ -1,6 +1,6 @@
 export { loginReducer, loginActions } from './model/slice/loginSlice';
 
-export type { LoginSchema } from './model/types/loginSchema';
+export type { Login } from './model/types/login';
 
 export { loginByUsername } from './model/services/loginByUsername/loginByUsername';
 

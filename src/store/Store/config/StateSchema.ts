@@ -3,13 +3,15 @@ import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
 
 import { UserSchema } from '../../User';
-import { LoginSchema } from '../../LoginByUsername';
+import { Login } from '../../LoginByUsername';
 import { ProfileSchema } from '../../Profile';
+import { CurrencyCommentSchema } from '../../Comment';
 
 export interface StateSchema {
     user: UserSchema
-    loginForm?: LoginSchema
+    loginForm?: Login
     profile?: ProfileSchema
+    currencyComment?: CurrencyCommentSchema
 }
 
 export type StateSchemaKey = keyof StateSchema;
