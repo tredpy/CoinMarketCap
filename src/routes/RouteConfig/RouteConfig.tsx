@@ -1,6 +1,6 @@
 import { RouteProps } from 'react-router-dom';
 
-import { MainPage } from 'pages/MainPage';
+import { CurrenciesPage } from 'pages/CurrenciesPage';
 import { CurrencyDetailsPage } from 'pages/CurrencyDetailsPage';
 import { ProfilePage } from 'pages/ProfilePage';
 import { PortfolioPage } from 'pages/PortfolioPage';
@@ -13,7 +13,7 @@ export type AppRoutesProps = RouteProps & {
 }
 
 type AppRoutes =
-    | 'MAIN'
+    | 'CURRENCIES'
     | 'CURRENCY_DETAILS'
     | 'PROFILE'
     | 'PORTFOLIO'
@@ -22,7 +22,7 @@ type AppRoutes =
     | 'NOT_FOUND'
 
 export const RoutePath: Record<AppRoutes, string> = {
-    MAIN: '/',
+    CURRENCIES: '/',
     CURRENCY_DETAILS: '/', // + :id
     PROFILE: '/profile/', // + :id
     PORTFOLIO: '/portfolio',
@@ -32,12 +32,12 @@ export const RoutePath: Record<AppRoutes, string> = {
 };
 
 export const RouteConfig: Record<AppRoutes, AppRoutesProps> = {
-    MAIN: {
-        path: RoutePath.MAIN,
-        element: <MainPage/>
+    CURRENCIES: {
+        path: RoutePath.CURRENCIES,
+        element: <CurrenciesPage/>
     },
     CURRENCY_DETAILS: {
-        path: `${RoutePath.MAIN}:id`,
+        path: `${RoutePath.CURRENCY_DETAILS}:id`,
         element: <CurrencyDetailsPage/>
     },
     PROFILE: {

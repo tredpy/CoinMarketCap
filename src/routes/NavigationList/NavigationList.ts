@@ -7,7 +7,7 @@ export interface NavigationType {
 
 export const NavigationList: NavigationType[] = [
     {
-        path: RoutePath.MAIN,
+        path: RoutePath.CURRENCIES,
         title: 'Криптовалюты'
     },
     {

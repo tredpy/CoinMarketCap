@@ -12,7 +12,7 @@ export function RequireAuth ({ children }: { children: ReactElement }) {
 
     if (!auth) {
         return <Navigate
-            to={RoutePath.MAIN}
+            to={RoutePath.CURRENCIES}
             state={{ from: location }}
             replace
         />;

@@ -10,12 +10,12 @@ import { RoutePath } from 'routes/RouteConfig/RouteConfig';
 import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';
 import { classNames } from 'helpers/classNames/classNames';
 
-import { HeaderNotifications } from '../HeaderNotifications/HeaderNotifications';
-import { HeaderNavigation } from '../HeaderNavigation/HeaderNavigation';
+import { Notifications } from '../Notifications/Notifications';
+import { Navigation } from '../Navigation/Navigation';
 import { CurrencySwitcher } from '../CurrencySwitcher/CurrencySwitcher';
 import { ThemeSwitcher } from '../ThemeSwitcher/ThemeSwitcher';
 import { LangSwitcher } from '../LangSwitcher/LangSwitcher';
-import { HeaderLogo } from '../HeaderLogo/HeaderLogo';
+import { Logo } from '../Logo/Logo';
 
 import { Button } from 'ui/Button/Button';
 
@@ -33,7 +33,7 @@ export const Header = memo(({ className }: HeaderProps) => {
     const navigate = useNavigate()
 
     const navigationList = useMemo(() => NavigationList.map((item) => (
-        <HeaderNavigation
+        <Navigation
             item={item}
             key={item.path}
         />
@@ -56,7 +56,7 @@ export const Header = memo(({ className }: HeaderProps) => {
                 data-testid="Header"
                 className={classNames(s.Header, {}, [className])}
             >
-                <HeaderLogo/>
+                <Logo/>
                 <div className={s.navigation}>
                     {navigationList}
                 </div>
@@ -64,7 +64,7 @@ export const Header = memo(({ className }: HeaderProps) => {
                     <LangSwitcher className={s.item}/>
                     <CurrencySwitcher className={s.item}/>
                     <ThemeSwitcher className={s.item}/>
-                    <HeaderNotifications className={s.item}/>
+                    <Notifications className={s.item}/>
                     <Button
                         view={'border'}
                         size={'M'}
@@ -83,7 +83,7 @@ export const Header = memo(({ className }: HeaderProps) => {
             data-testid="Header"
             className={classNames(s.Header, {}, [className])}
         >
-            <HeaderLogo/>
+            <Logo/>
             <div className={s.navigation}>
                 {navigationList}
             </div>

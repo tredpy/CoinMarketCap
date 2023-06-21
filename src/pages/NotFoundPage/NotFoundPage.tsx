@@ -21,7 +21,7 @@ export const NotFoundPage = memo(({ className }: NotFoundPageProps) => {
     const navigate = useNavigate()
 
     const onBackToHomepage = () => {
-        navigate(RoutePath.MAIN)
+        navigate(RoutePath.CURRENCIES)
     }
 
     return (

@@ -2,7 +2,7 @@ import { memo, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import { ProfileHeader } from 'components/ProfileHeader/ProfileHeader';
+import { ProfileCardHeader } from 'components/ProfileCardHeader/ProfileCardHeader';
 import { ProfileCard } from 'components/ProfileCard/ProfileCard';
 
 import { getUserAuthData } from 'store/User';
@@ -94,7 +94,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
                     data-testid="ProfilePage"
                     className={classNames('', {}, [className])}
                 >
-                    <ProfileHeader/>
+                    <ProfileCardHeader/>
                     {validateErrors?.length && validateErrors.map((err) => (
                         <Text
                             key={err}
