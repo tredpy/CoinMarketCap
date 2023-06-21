@@ -6,7 +6,7 @@ import { userReducer } from '../../User';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 
-import { $api, $coinGeckoApi } from 'api/api';
+import { $api, $coinGeckoApi } from 'common/api/api';
 
 export function createReduxStore (
     initialState?: StateSchema,

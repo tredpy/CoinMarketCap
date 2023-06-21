@@ -7,8 +7,8 @@ import {
     profileActions
 } from 'store/Profile';
 
-import { classNames } from 'helpers/classNames/classNames';
-import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';
+import { classNames } from 'common/helpers/classNames/classNames';
+import { useAppDispatch } from 'common/hooks/useAppDispatch/useAppDispatch';
 
 import { Button } from 'ui/Button/Button';
 import { Text } from 'ui/Text/Text';

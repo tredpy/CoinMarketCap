@@ -3,17 +3,17 @@ import { useSelector } from 'react-redux';
 
 import { getUserInitiated, userActions } from 'store/User';
 
-import { AppRouter } from 'routes/AppRouter/AppRouter';
+import { AppRouter } from 'common/routes/AppRouter/AppRouter';
 
-import { classNames } from 'helpers/classNames/classNames';
-import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';
-import { useTheme } from 'hooks/useTheme/useTheme';
+import { classNames } from 'common/helpers/classNames/classNames';
+import { useAppDispatch } from 'common/hooks/useAppDispatch/useAppDispatch';
+import { useTheme } from 'common/hooks/useTheme/useTheme';
 
 import { PageLoader } from 'components/PageLoader/PageLoader';
 import { SideBar } from 'components/SideBar/SideBar';
 import { Header } from 'components/Header/Header';
 
-import 'assets/styles/index.scss';
+import 'common/assets/styles/index.scss';
 
 export const App = memo(() => {
     const { theme } = useTheme();

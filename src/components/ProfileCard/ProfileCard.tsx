@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 import { Profile } from 'store/Profile/model/types/profile';
 
-import { classNames, Mods } from 'helpers/classNames/classNames';
+import { classNames, Mods } from 'common/helpers/classNames/classNames';
 
 import { Input } from 'ui/Input/Input';
 import { Avatar } from 'ui/Avatar/Avatar';

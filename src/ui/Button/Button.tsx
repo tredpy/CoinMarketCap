@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, memo } from 'react';
 
-import { classNames, Mods } from 'helpers/classNames/classNames';
+import { classNames, Mods } from 'common/helpers/classNames/classNames';
 
 import s from './Button.module.scss';
 

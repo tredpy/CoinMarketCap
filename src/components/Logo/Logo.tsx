@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import { RoutePath } from 'routes/RouteConfig/RouteConfig';
+import { RoutePath } from 'common/routes/RouteConfig/RouteConfig';
 
 import { AppLink } from 'ui/AppLink/AppLink';
 

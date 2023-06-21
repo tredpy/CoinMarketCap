@@ -1,6 +1,6 @@
 import React, { InputHTMLAttributes, memo } from 'react';
 
-import { classNames, Mods } from 'helpers/classNames/classNames';
+import { classNames, Mods } from 'common/helpers/classNames/classNames';
 
 import s from './Input.module.scss';
 

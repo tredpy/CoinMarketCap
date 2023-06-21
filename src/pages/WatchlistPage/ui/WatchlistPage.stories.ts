@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import WatchlistPage from './WatchlistPage';
-import { ThemeDecorator } from 'libs/storybook/ThemeDecorator/ThemeDecorator';
+import { ThemeDecorator } from 'common/libs/Storybook/ThemeDecorator/ThemeDecorator';
 
 const meta = {
     title: 'pages/WatchlistPage',

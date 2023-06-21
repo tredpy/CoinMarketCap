@@ -2,7 +2,7 @@ import { memo } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { NavigationType } from 'routes/NavigationList/NavigationList';
+import { NavigationType } from 'common/routes/NavigationList/NavigationList';
 
 import { AppLink } from 'ui/AppLink/AppLink';
 

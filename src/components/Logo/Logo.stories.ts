@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Logo } from './Logo';
 
-import { ThemeDecorator } from 'libs/storybook/ThemeDecorator/ThemeDecorator';
+import { ThemeDecorator } from 'common/libs/Storybook/ThemeDecorator/ThemeDecorator';
 
 const meta = {
     title: 'features/Logo',

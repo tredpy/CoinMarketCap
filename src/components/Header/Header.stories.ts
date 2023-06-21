@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Header } from './Header';
 
-import { ThemeDecorator } from 'libs/storybook/ThemeDecorator/ThemeDecorator';
-import { StoreDecorator } from 'libs/storybook/StoreDecorator/StoreDecorator';
+import { ThemeDecorator } from 'common/libs/Storybook/ThemeDecorator/ThemeDecorator';
+import { StoreDecorator } from 'common/libs/Storybook/StoreDecorator/StoreDecorator';
 
 const meta = {
     title: 'widget/Header',

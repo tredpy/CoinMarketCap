@@ -1,9 +1,9 @@
 import { memo, useState } from 'react';
 
-import { classNames, Mods } from 'helpers/classNames/classNames';
+import { classNames, Mods } from 'common/helpers/classNames/classNames';
 
-import SideBarHide from 'assets/icons/SideBarHide.svg';
-import SideBarShow from 'assets/icons/SideBarShow.svg';
+import SideBarHide from 'common/assets/icons/SideBarHide.svg';
+import SideBarShow from 'common/assets/icons/SideBarShow.svg';
 
 import { Button } from 'ui/Button/Button';
 

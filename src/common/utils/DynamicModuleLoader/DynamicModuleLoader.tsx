@@ -4,7 +4,7 @@ import { Reducer } from '@reduxjs/toolkit';
 
 import { ReduxStoreWithManager, StateSchemaKey } from 'store/Store/config/StateSchema';
 
-import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';
+import { useAppDispatch } from '../../hooks/useAppDispatch/useAppDispatch';
 
 export type ReducersList = {
     [name in StateSchemaKey]?: Reducer;

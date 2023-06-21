@@ -2,7 +2,7 @@ import { updateProfileData } from './updateProfileData';
 
 import { ValidateProfileError } from '../../types/profile';
 
-import { TestAsyncThunk } from 'tests/TestAsyncThunk/TestAsyncThunk';
+import { TestAsyncThunk } from 'common/tests/TestAsyncThunk/TestAsyncThunk';
 
 const data = {
     username: 'Admin',

@@ -18,11 +18,11 @@ import {
     profileReducer
 } from 'store/Profile';
 
-import { DynamicModuleLoader, ReducersList } from 'utils/DynamicModuleLoader/DynamicModuleLoader';
-import { useInitialEffect } from 'hooks/useInitialEffect/useInitialEffect';
-import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';
-import { classNames } from 'helpers/classNames/classNames';
-import { RoutePath } from 'routes/RouteConfig/RouteConfig';
+import { DynamicModuleLoader, ReducersList } from 'common/utils/DynamicModuleLoader/DynamicModuleLoader';
+import { useInitialEffect } from 'common/hooks/useInitialEffect/useInitialEffect';
+import { useAppDispatch } from 'common/hooks/useAppDispatch/useAppDispatch';
+import { classNames } from 'common/helpers/classNames/classNames';
+import { RoutePath } from 'common/routes/RouteConfig/RouteConfig';
 
 import { Button } from 'ui/Button/Button';
 import { Text } from 'ui/Text/Text';

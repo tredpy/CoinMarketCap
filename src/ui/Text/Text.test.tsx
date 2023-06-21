@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 
 import { Text } from './Text';
 
-import { ComponentRender } from 'tests/ComponentRender/ComponentRender';
+import { ComponentRender } from 'common/tests/ComponentRender/ComponentRender';
 
 describe('Text', () => {
     test('Render test', () => {

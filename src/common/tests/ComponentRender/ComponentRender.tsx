@@ -7,7 +7,7 @@ import { I18nextProvider } from 'react-i18next';
 
 import { StateSchema } from 'store/Store';
 
-import { StoreProvider } from 'utils/StoreProvider/StoreProvider';
+import { StoreProvider } from '../../utils/StoreProvider/StoreProvider';
 
 interface ComponentRenderOptions {
     route?: string

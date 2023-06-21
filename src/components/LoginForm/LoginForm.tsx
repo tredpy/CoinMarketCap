@@ -12,9 +12,9 @@ import {
     loginByUsername
 } from 'store/LoginByUsername';
 
-import { DynamicModuleLoader, ReducersList } from 'utils/DynamicModuleLoader/DynamicModuleLoader';
-import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';
-import { classNames } from 'helpers/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from 'common/utils/DynamicModuleLoader/DynamicModuleLoader';
+import { useAppDispatch } from 'common/hooks/useAppDispatch/useAppDispatch';
+import { classNames } from 'common/helpers/classNames/classNames';
 
 import { Button } from 'ui/Button/Button';
 import { Input } from 'ui/Input/Input';

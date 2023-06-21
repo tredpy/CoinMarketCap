@@ -4,7 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 
 import { getUserAuthData } from 'store/User';
 
-import { RoutePath } from 'routes/RouteConfig/RouteConfig';
+import { RoutePath } from '../../routes/RouteConfig/RouteConfig';
 
 export function RequireAuth ({ children }: { children: ReactElement }) {
     const auth = useSelector(getUserAuthData);

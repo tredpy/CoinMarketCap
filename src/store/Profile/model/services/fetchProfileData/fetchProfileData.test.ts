@@ -1,6 +1,6 @@
 import { fetchProfileData } from './fetchProfileData';
 
-import { TestAsyncThunk } from 'tests/TestAsyncThunk/TestAsyncThunk';
+import { TestAsyncThunk } from 'common/tests/TestAsyncThunk/TestAsyncThunk';
 
 const data = {
     username: 'Admin',

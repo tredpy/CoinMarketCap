@@ -1,7 +1,7 @@
 import React, { ReactNode, useCallback, useEffect, useState } from 'react';
 
-import { classNames, Mods } from 'helpers/classNames/classNames';
-import { useTheme } from 'hooks/useTheme/useTheme';
+import { classNames, Mods } from 'common/helpers/classNames/classNames';
+import { useTheme } from 'common/hooks/useTheme/useTheme';
 
 import { Portal } from '../Portal/Portal';
 

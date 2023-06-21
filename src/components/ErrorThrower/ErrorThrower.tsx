@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import { classNames } from 'helpers/classNames/classNames';
+import { classNames } from 'common/helpers/classNames/classNames';
 
 import { Button } from 'ui/Button/Button';
 import { Text } from 'ui/Text/Text';

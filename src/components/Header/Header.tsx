@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 
 import { getUserAuthData, userActions } from 'store/User';
 
-import { NavigationList } from 'routes/NavigationList/NavigationList';
-import { RoutePath } from 'routes/RouteConfig/RouteConfig';
+import { NavigationList } from 'common/routes/NavigationList/NavigationList';
+import { RoutePath } from 'common/routes/RouteConfig/RouteConfig';
 
-import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';
-import { classNames } from 'helpers/classNames/classNames';
+import { useAppDispatch } from 'common/hooks/useAppDispatch/useAppDispatch';
+import { classNames } from 'common/helpers/classNames/classNames';
 
 import { Notifications } from '../Notifications/Notifications';
 import { Navigation } from '../Navigation/Navigation';

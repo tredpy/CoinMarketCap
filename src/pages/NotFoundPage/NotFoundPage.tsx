@@ -1,8 +1,8 @@
 import { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { classNames } from 'helpers/classNames/classNames';
-import { RoutePath } from 'routes/RouteConfig/RouteConfig';
+import { classNames } from 'common/helpers/classNames/classNames';
+import { RoutePath } from 'common/routes/RouteConfig/RouteConfig';
 
 import { Button } from 'ui/Button/Button';
 import { Text } from 'ui/Text/Text';

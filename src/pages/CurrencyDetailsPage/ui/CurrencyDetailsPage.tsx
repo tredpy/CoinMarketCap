@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { classNames } from 'helpers/classNames/classNames';
+import { classNames } from 'common/helpers/classNames/classNames';
 
 import { useTranslation } from 'react-i18next';
 

@@ -10,19 +10,11 @@
     "moduleResolution": "node",
     "baseUrl": "src/",
     "paths": {
+      "common/*": ["common/*"],
       "components/*": ["components/*"],
-      "helpers/*": ["helpers/*"],
-      "context/*": ["context/*"],
-      "assets/*": ["assets/*"],
-      "routes/*": ["routes/*"],
-      "hooks/*": ["hooks/*"],
       "pages/*": ["pages/*"],
       "store/*": ["store/*"],
-      "tests/*": ["tests/*"],
-      "utils/*": ["utils/*"],
-      "libs/*": ["libs/*"],
-      "api/*": ["api/*"],
-      "ui/*": ["ui/*"]
+      "ui/*": ["ui/*"],
     },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true

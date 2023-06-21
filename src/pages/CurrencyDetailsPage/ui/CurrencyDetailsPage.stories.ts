@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import CurrencyDetailsPage from './CurrencyDetailsPage';
-import { ThemeDecorator } from 'libs/storybook/ThemeDecorator/ThemeDecorator';
+import { ThemeDecorator } from 'common/libs/Storybook/ThemeDecorator/ThemeDecorator';
 
 const meta = {
     title: 'pages/CurrencyDetailsPage',

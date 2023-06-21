@@ -2,7 +2,7 @@ import { screen } from '@testing-library/react';
 
 import { AppLink } from './AppLink';
 
-import { ComponentRender } from 'tests/ComponentRender/ComponentRender';
+import { ComponentRender } from 'common/tests/ComponentRender/ComponentRender';
 
 describe('AppLink', () => {
     test('Render test', () => {

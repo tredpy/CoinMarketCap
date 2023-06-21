@@ -1,8 +1,8 @@
 import { Preview } from '@storybook/react';
 
-import { StyleDecorator } from 'libs/storybook/StyleDecorator/StyleDecorator';
-import { ThemeDecorator } from 'libs/storybook/ThemeDecorator/ThemeDecorator';
-import { RouteDecorator } from 'libs/storybook/RouteDecorator/RouteDecorator';
+import { StyleDecorator } from 'common/libs/Storybook/StyleDecorator/StyleDecorator';
+import { ThemeDecorator } from 'common/libs/Storybook/ThemeDecorator/ThemeDecorator';
+import { RouteDecorator } from 'common/libs/Storybook/RouteDecorator/RouteDecorator';
 
 const preview: Preview = {
     decorators: [

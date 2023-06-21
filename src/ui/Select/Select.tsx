@@ -1,6 +1,6 @@
 import { ChangeEvent, memo, useMemo } from 'react';
 
-import { classNames } from 'helpers/classNames/classNames';
+import { classNames } from 'common/helpers/classNames/classNames';
 
 import s from './Select.module.scss';
 

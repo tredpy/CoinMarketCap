@@ -2,7 +2,7 @@ import { userActions } from '../../../../User';
 
 import { loginByUsername } from './loginByUsername';
 
-import { TestAsyncThunk } from 'tests/TestAsyncThunk/TestAsyncThunk';
+import { TestAsyncThunk } from 'common/tests/TestAsyncThunk/TestAsyncThunk';
 
 describe('loginByUsername', () => {
     test('Should Return Success', async () => {
