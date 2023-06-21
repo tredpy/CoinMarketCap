@@ -6,7 +6,7 @@ import { userReducer } from '../../User';
 import { StateSchema, ThunkExtraArg } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 
-import { $api } from 'api/api';
+import { $api, $coinGeckoApi } from 'api/api';
 
 export function createReduxStore (
     initialState?: StateSchema,
@@ -20,7 +20,8 @@ export function createReduxStore (
     const reducerManager = createReducerManager(rootReducers);
 
     const extraArg: ThunkExtraArg = {
-        api: $api
+        api: $api,
+        coinGeckoApi: $coinGeckoApi
     };
 
     const store = configureStore({
