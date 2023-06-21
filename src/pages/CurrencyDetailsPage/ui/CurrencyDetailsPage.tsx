@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import {
-    currencyCommentReducer,
-    getCurrencyComment,
-    fetchCommentByCurrencyId,
-    getCurrencyCommentIsLoading
+    currencyCommentsReducer,
+    getCurrencyComments,
+    fetchCommentsByCurrencyId,
+    getCurrencyCommentsIsLoading
 } from 'store/Comment';
 
 import { CommentsForm } from 'components/CommentsForm/CommentsForm';
@@ -20,26 +20,26 @@ import { Text } from 'ui/Text/Text';
 
 import { useTranslation } from 'react-i18next';
 
-import s from './CurrencyPage.module.scss';
+import s from './CurrencyDetailsPage.module.scss';
 
 interface CurrencyPageProps {
     className?: string
 }
 
 const reducers: ReducersList = {
-    currencyComment: currencyCommentReducer
+    currencyComments: currencyCommentsReducer
 };
 
-const CurrencyPage = memo((props: CurrencyPageProps) => {
+const CurrencyDetailsPage = memo((props: CurrencyPageProps) => {
     const { className } = props;
     const { t } = useTranslation('currency');
     const { id } = useParams<{ id: string }>();
     const dispatch = useAppDispatch();
-    const comments = useSelector(getCurrencyComment.selectAll);
-    const commentsIsLoading = useSelector(getCurrencyCommentIsLoading);
+    const comments = useSelector(getCurrencyComments.selectAll);
+    const commentsIsLoading = useSelector(getCurrencyCommentsIsLoading);
 
     useInitialEffect(() => {
-        dispatch(fetchCommentByCurrencyId(id));
+        dispatch(fetchCommentsByCurrencyId(id));
     });
 
     if (!id) {
@@ -63,4 +63,4 @@ const CurrencyPage = memo((props: CurrencyPageProps) => {
     );
 });
 
-export default CurrencyPage;
+export default CurrencyDetailsPage;

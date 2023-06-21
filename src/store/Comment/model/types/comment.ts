@@ -8,7 +8,7 @@ export interface Comment {
     text: string
 }
 
-export interface CurrencyCommentSchema extends EntityState<Comment> {
+export interface CurrencyCommentsSchema extends EntityState<Comment> {
     isLoading?: boolean
     error?: string
 }

@@ -3,15 +3,45 @@
     {
       "id": "1",
       "username": "admin",
-      "password": "admin"
+      "password": "admin",
+      "avatar": "https://cache.sessionize.com/image/9376-400o400o2-QCz7NSeNbhhyxHxZhy5VjA.jpeg"
+    },
+    {
+      "id": "2",
+      "username": "moder",
+      "password": "moder",
+      "avatar": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQaSUYUyPAttZ8pBp_zz9n5mg0Q7_kU6aImJSXeggAo9noAANSo"
+    },
+    {
+      "id": "3",
+      "username": "user",
+      "password": "user",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzfHQGp540FzWQ-Za2b1BeSrTz7QW3tLscTnz_qdtC2uXQxa2q2KQ_nGPFbcKGvpeu9zo&usqp=CAU"
     }
   ],
-  "profile": {
-    "username": "Admin",
-    "age": 33,
-    "city": "Moscow",
-    "avatar": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQaSUYUyPAttZ8pBp_zz9n5mg0Q7_kU6aImJSXeggAo9noAANSo"
-  },
+  "profile": [
+    {
+      "id": "1",
+      "username": "Admin",
+      "age": 30,
+      "city": "Moscow",
+      "avatar": "https://cache.sessionize.com/image/9376-400o400o2-QCz7NSeNbhhyxHxZhy5VjA.jpeg"
+    },
+    {
+      "id": "2",
+      "username": "Moder",
+      "age": 33,
+      "city": "Kharkiv",
+      "avatar": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQaSUYUyPAttZ8pBp_zz9n5mg0Q7_kU6aImJSXeggAo9noAANSo"
+    },
+    {
+      "id": "3",
+      "username": "User",
+      "age": 35,
+      "city": "Los Angeles",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzfHQGp540FzWQ-Za2b1BeSrTz7QW3tLscTnz_qdtC2uXQxa2q2KQ_nGPFbcKGvpeu9zo&usqp=CAU"
+    }
+  ],
   "currency": [
     {
       "id": "1"
@@ -28,7 +58,7 @@
       "id": "1",
       "text": "some comment",
       "currencyId": "1",
-      "userId": "1"
+      "userId": "3"
     },
     {
       "id": "2",
@@ -40,13 +70,13 @@
       "id": "3",
       "text": "some comment 3",
       "currencyId": "1",
-      "userId": "1"
+      "userId": "2"
     },
     {
       "id": "4",
       "text": "some comment",
       "currencyId": "2",
-      "userId": "1"
+      "userId": "3"
     },
     {
       "id": "5",
@@ -58,13 +88,13 @@
       "id": "6",
       "text": "some comment",
       "currencyId": "3",
-      "userId": "1"
+      "userId": "2"
     },
     {
       "id": "7",
       "text": "some comment 2",
       "currencyId": "3",
-      "userId": "1"
+      "userId": "3"
     }
   ]
 }

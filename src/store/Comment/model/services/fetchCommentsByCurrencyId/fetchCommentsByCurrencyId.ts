@@ -4,12 +4,12 @@ import { ThunkConfig } from '../../../../Store';
 
 import { Comment } from '../../types/comment';
 
-export const fetchCommentByCurrencyId = createAsyncThunk<
+export const fetchCommentsByCurrencyId = createAsyncThunk<
     Comment[],
     string | undefined,
     ThunkConfig<string>
     >(
-        'fetchCommentByCurrencyId',
+        'fetchCommentsByCurrencyId',
         async (currencyId, thunkApi) => {
             const { extra, rejectWithValue } = thunkApi;
 

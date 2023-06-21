@@ -5,13 +5,15 @@ import { AxiosInstance } from 'axios';
 import { UserSchema } from '../../User';
 import { Login } from '../../LoginByUsername';
 import { ProfileSchema } from '../../Profile';
-import { CurrencyCommentSchema } from '../../Comment';
+import { CurrencyCommentsSchema } from '../../Comment';
+import { AddNewCommentSchema } from '../../AddNewComment';
 
 export interface StateSchema {
     user: UserSchema
     loginForm?: Login
     profile?: ProfileSchema
-    currencyComment?: CurrencyCommentSchema
+    currencyComments?: CurrencyCommentsSchema
+    addNewComment?: AddNewCommentSchema
 }
 
 export type StateSchemaKey = keyof StateSchema;

@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import CurrencyPage from './CurrencyPage';
+import CurrencyDetailsPage from './CurrencyDetailsPage';
 import { ThemeDecorator } from 'libs/storybook/ThemeDecorator/ThemeDecorator';
 
 const meta = {
-    title: 'pages/CurrencyPage',
-    component: CurrencyPage,
+    title: 'pages/CurrencyDetailsPage',
+    component: CurrencyDetailsPage,
     tags: ['autodocs'],
     argTypes: {}
-} satisfies Meta<typeof CurrencyPage>;
+} satisfies Meta<typeof CurrencyDetailsPage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

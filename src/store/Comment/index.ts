@@ -1,9 +1,9 @@
-export type { Comment, CurrencyCommentSchema } from './model/types/comment';
+export type { Comment, CurrencyCommentsSchema } from './model/types/comment';
 
-export { getCurrencyCommentIsLoading } from './model/selectors/getCurrencyCommentIsLoading/getCurrencyCommentIsLoading';
-export { getCurrencyCommentError } from './model/selectors/getCurrencyCommentError/getCurrencyCommentError';
+export { getCurrencyCommentsIsLoading } from './model/selectors/getCurrencyCommentsIsLoading/getCurrencyCommentsIsLoading';
+export { getCurrencyCommentsError } from './model/selectors/getCurrencyCommentsError/getCurrencyCommentsError';
 
-export { fetchCommentByCurrencyId } from './model/services/fetchCommentByCurrencyId/fetchCommentByCurrencyId';
+export { fetchCommentsByCurrencyId } from './model/services/fetchCommentsByCurrencyId/fetchCommentsByCurrencyId';
 
-export { currencyCommentReducer } from './model/slice/commentSlice';
-export { getCurrencyComment } from './model/slice/commentSlice';
+export { currencyCommentsReducer } from './model/slice/commentsSlice';
+export { getCurrencyComments } from './model/slice/commentsSlice';

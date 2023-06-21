@@ -1,5 +1,5 @@
-import { memo, useEffect, useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { memo, useCallback } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import { ProfileHeader } from 'components/ProfileHeader/ProfileHeader';
@@ -19,6 +19,7 @@ import {
 } from 'store/Profile';
 
 import { DynamicModuleLoader, ReducersList } from 'utils/DynamicModuleLoader/DynamicModuleLoader';
+import { useInitialEffect } from 'hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'hooks/useAppDispatch/useAppDispatch';
 import { classNames } from 'helpers/classNames/classNames';
 import { RoutePath } from 'routes/RouteConfig/RouteConfig';
@@ -42,8 +43,8 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
     const { t } = useTranslation('profile');
 
     const authData = useSelector(getUserAuthData)
-
     const navigate = useNavigate()
+    const { id } = useParams<{ id: string }>();
 
     const dispatch = useAppDispatch();
     const formData = useSelector(getProfileForm);
@@ -60,11 +61,11 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
         [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении')
     };
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') {
-            dispatch(fetchProfileData());
+    useInitialEffect(() => {
+        if (id) {
+            dispatch(fetchProfileData(id));
         }
-    }, [dispatch]);
+    });
 
     const onChangeCity = useCallback((value?: string) => {
         dispatch(profileActions.updateProfile({ city: value || '' }));

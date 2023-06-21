@@ -1,12 +1,12 @@
 import { RouteProps } from 'react-router-dom';
 
-import { NotFoundPage } from 'pages/NotFoundPage/NotFoundPage';
+import { MainPage } from 'pages/MainPage';
+import { CurrencyDetailsPage } from 'pages/CurrencyDetailsPage';
+import { ProfilePage } from 'pages/ProfilePage';
 import { PortfolioPage } from 'pages/PortfolioPage';
 import { WatchlistPage } from 'pages/WatchlistPage';
-import { CurrencyPage } from 'pages/CurrencyPage';
-import { ProfilePage } from 'pages/ProfilePage';
 import { LoginPage } from 'pages/LoginPage';
-import { MainPage } from 'pages/MainPage';
+import { NotFoundPage } from 'pages/NotFoundPage/NotFoundPage';
 
 export type AppRoutesProps = RouteProps & {
     authOnly?: boolean
@@ -14,7 +14,7 @@ export type AppRoutesProps = RouteProps & {
 
 type AppRoutes =
     | 'MAIN'
-    | 'CURRENCY'
+    | 'CURRENCY_DETAILS'
     | 'PROFILE'
     | 'PORTFOLIO'
     | 'WATCHLIST'
@@ -23,8 +23,8 @@ type AppRoutes =
 
 export const RoutePath: Record<AppRoutes, string> = {
     MAIN: '/',
-    CURRENCY: '/',
-    PROFILE: '/profile',
+    CURRENCY_DETAILS: '/', // + :id
+    PROFILE: '/profile/', // + :id
     PORTFOLIO: '/portfolio',
     WATCHLIST: '/watchlist',
     LOGIN: '/login',
@@ -36,12 +36,12 @@ export const RouteConfig: Record<AppRoutes, AppRoutesProps> = {
         path: RoutePath.MAIN,
         element: <MainPage/>
     },
-    CURRENCY: {
+    CURRENCY_DETAILS: {
         path: `${RoutePath.MAIN}:id`,
-        element: <CurrencyPage/>
+        element: <CurrencyDetailsPage/>
     },
     PROFILE: {
-        path: RoutePath.PROFILE,
+        path: `${RoutePath.PROFILE}:id`,
         element: <ProfilePage/>
     },
     PORTFOLIO: {
