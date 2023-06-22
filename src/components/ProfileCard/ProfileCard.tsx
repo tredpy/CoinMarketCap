@@ -4,10 +4,10 @@ import { Profile } from 'store/Profile/model/types/profile';
 
 import { classNames, Mods } from 'common/helpers/classNames/classNames';
 
-import { Input } from 'ui/Input/Input';
-import { Avatar } from 'ui/Avatar/Avatar';
-import { Text } from 'ui/Text/Text';
 import { Loader } from 'ui/Loader/Loader';
+import { Avatar } from 'ui/Avatar/Avatar';
+import { Input } from 'ui/Input/Input';
+import { Text } from 'ui/Text/Text';
 
 import { useTranslation } from 'react-i18next';
 

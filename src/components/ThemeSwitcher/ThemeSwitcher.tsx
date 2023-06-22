@@ -2,9 +2,8 @@ import { memo } from 'react';
 
 import { classNames } from 'common/helpers/classNames/classNames';
 import { useTheme } from 'common/hooks/useTheme/useTheme';
-
-import ThemeDark from 'common/assets/icons/ThemeDark.svg';
 import ThemeLight from 'common/assets/icons/ThemeLight.svg';
+import ThemeDark from 'common/assets/icons/ThemeDark.svg';
 
 import { Button } from 'ui/Button/Button';
 

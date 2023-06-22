@@ -15,6 +15,7 @@ interface ErrorThrowerProps {
 
 export const ErrorThrower = memo(({ className }: ErrorThrowerProps) => {
     const { t } = useTranslation();
+
     const onReloadPage = () => {
         window.location.reload();
     };

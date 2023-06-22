@@ -1,7 +1,6 @@
 import { memo, useState } from 'react';
 
 import { classNames, Mods } from 'common/helpers/classNames/classNames';
-
 import SideBarHide from 'common/assets/icons/SideBarHide.svg';
 import SideBarShow from 'common/assets/icons/SideBarShow.svg';
 

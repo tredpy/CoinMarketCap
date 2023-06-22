@@ -7,21 +7,21 @@ import {
     profileActions
 } from 'store/Profile';
 
-import { classNames } from 'common/helpers/classNames/classNames';
 import { useAppDispatch } from 'common/hooks/useAppDispatch/useAppDispatch';
+import { classNames } from 'common/helpers/classNames/classNames';
 
 import { Button } from 'ui/Button/Button';
 import { Text } from 'ui/Text/Text';
 
 import { useTranslation } from 'react-i18next';
 
-import s from './ProfileCardHeader.module.scss';
+import s from './ProfileHeader.module.scss';
 
 interface ProfileHeaderProps {
     className?: string
 }
 
-export const ProfileCardHeader = memo((props: ProfileHeaderProps) => {
+export const ProfileHeader = memo((props: ProfileHeaderProps) => {
     const {
         className
     } = props;
@@ -44,12 +44,12 @@ export const ProfileCardHeader = memo((props: ProfileHeaderProps) => {
     }, [dispatch]);
 
     return (
-        <div className={classNames(s.ProfilePageHeader, {}, [className])}>
+        <div className={classNames(s.ProfileHeader, {}, [className])}>
             <Text text={t('Профиль')} size={'L'}/>
             {readOnly
                 ? (
                     <Button
-                        className={s.editBtn}
+                        className={s.btn}
                         view={'border'}
                         onClick={onEdit}
                     >
@@ -59,14 +59,14 @@ export const ProfileCardHeader = memo((props: ProfileHeaderProps) => {
                 : (
                     <>
                         <Button
-                            className={s.editBtn}
+                            className={s.btn}
                             view={'border_red'}
                             onClick={onCancelEdit}
                         >
                             {t('Отменить')}
                         </Button>
                         <Button
-                            className={s.saveBtn}
+                            className={s.btn}
                             view={'border'}
                             onClick={onSave}
                         >

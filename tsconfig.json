@@ -25,11 +25,12 @@
     }
   },
   "include": [
-    "./json-server/index.js",
-    "./config/jest/setupTests.ts",
+    "./**.js",
     "./src/**/*.ts",
     "./src/**/*.tsx",
     "./**/*.ts",
-    "./**/*.tsx"
+    "./**/*.tsx",
+    "./json-server/index.js",
+    "./config/jest/setupTests.ts"
   ]
 }

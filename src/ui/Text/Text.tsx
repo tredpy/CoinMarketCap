@@ -5,8 +5,8 @@ import { classNames, Mods } from 'common/helpers/classNames/classNames';
 import s from './Text.module.scss';
 
 export type TextView = 'light' | 'dark' | 'primary' | 'error'
-export type TextSize = 'M' | 'L'
 export type TextAlign = 'right' | 'left' | 'center'
+export type TextSize = 'M' | 'L'
 
 interface TextProps {
     className?: string

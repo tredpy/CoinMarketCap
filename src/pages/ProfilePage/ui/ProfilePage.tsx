@@ -2,9 +2,6 @@ import { memo, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import { ProfileCardHeader } from 'components/ProfileCardHeader/ProfileCardHeader';
-import { ProfileCard } from 'components/ProfileCard/ProfileCard';
-
 import { getUserAuthData } from 'store/User';
 import { ValidateProfileError } from 'store/Profile/model/types/profile';
 import {
@@ -17,6 +14,9 @@ import {
     profileActions,
     profileReducer
 } from 'store/Profile';
+
+import { ProfileHeader } from 'components/ProfileHeader/ProfileHeader';
+import { ProfileCard } from 'components/ProfileCard/ProfileCard';
 
 import { DynamicModuleLoader, ReducersList } from 'common/utils/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from 'common/hooks/useInitialEffect/useInitialEffect';
@@ -94,7 +94,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
                     data-testid="ProfilePage"
                     className={classNames('', {}, [className])}
                 >
-                    <ProfileCardHeader/>
+                    <ProfileHeader/>
                     {validateErrors?.length && validateErrors.map((err) => (
                         <Text
                             key={err}

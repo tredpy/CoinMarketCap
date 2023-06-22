@@ -6,15 +6,14 @@ import { getUserAuthData, userActions } from 'store/User';
 
 import { NavigationList } from 'common/routes/NavigationList/NavigationList';
 import { RoutePath } from 'common/routes/RouteConfig/RouteConfig';
-
 import { useAppDispatch } from 'common/hooks/useAppDispatch/useAppDispatch';
 import { classNames } from 'common/helpers/classNames/classNames';
 
-import { Notifications } from '../Notifications/Notifications';
-import { Navigation } from '../Navigation/Navigation';
 import { CurrencySwitcher } from '../CurrencySwitcher/CurrencySwitcher';
+import { Notifications } from '../Notifications/Notifications';
 import { ThemeSwitcher } from '../ThemeSwitcher/ThemeSwitcher';
 import { LangSwitcher } from '../LangSwitcher/LangSwitcher';
+import { Navigation } from '../Navigation/Navigation';
 import { Logo } from '../Logo/Logo';
 
 import { Button } from 'ui/Button/Button';

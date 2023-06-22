@@ -1,11 +1,10 @@
 import { memo, useCallback, useState } from 'react';
 
+import HeaderNotification from 'common/assets/icons/HeaderNotification.svg';
 import { classNames } from 'common/helpers/classNames/classNames';
 
 import { Button } from 'ui/Button/Button';
 import { Modal } from 'ui/Modal/Modal';
-
-import HeaderNotification from 'common/assets/icons/HeaderNotification.svg';
 
 import s from './Notifications.module.scss'
 

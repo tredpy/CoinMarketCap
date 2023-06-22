@@ -49,4 +49,4 @@ module.exports = {
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
         'n/handle-callback-err': 'off'
     }
-};
+}
