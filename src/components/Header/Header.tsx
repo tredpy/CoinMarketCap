@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 
 import { getUserAuthData, userActions } from 'store/User';
 
-import { NavigationList } from 'common/routes/NavigationList/NavigationList';
 import { RoutePath } from 'common/routes/RouteConfig/RouteConfig';
+import { getNavigationList } from 'common/routes/NavigationList/NavigationList';
 import { useAppDispatch } from 'common/hooks/useAppDispatch/useAppDispatch';
 import { classNames } from 'common/helpers/classNames/classNames';
 
@@ -31,12 +31,14 @@ export const Header = memo(({ className }: HeaderProps) => {
 
     const navigate = useNavigate()
 
-    const navigationList = useMemo(() => NavigationList.map((item) => (
+    const navigationList = useSelector(getNavigationList);
+
+    const navigation = useMemo(() => navigationList.map((item) => (
         <Navigation
             item={item}
             key={item.path}
         />
-    )), []);
+    )), [navigationList]);
 
     const authData = useSelector(getUserAuthData);
     const dispatch = useAppDispatch();
@@ -57,7 +59,7 @@ export const Header = memo(({ className }: HeaderProps) => {
             >
                 <Logo/>
                 <div className={s.navigation}>
-                    {navigationList}
+                    {navigation}
                 </div>
                 <div className={s.menu}>
                     <LangSwitcher className={s.item}/>
@@ -84,7 +86,7 @@ export const Header = memo(({ className }: HeaderProps) => {
         >
             <Logo/>
             <div className={s.navigation}>
-                {navigationList}
+                {navigation}
             </div>
             <div className={s.menu}>
                 <LangSwitcher className={s.item}/>
