@@ -15,8 +15,8 @@ export type AppRoutesProps = RouteProps & {
 type AppRoutes =
     | 'CURRENCIES'
     | 'CURRENCY_DETAILS'
-    | 'USER'
     | 'PROFILE'
+    | 'USER'
     | 'PORTFOLIO'
     | 'WATCHLIST'
     | 'LOGIN'
@@ -24,9 +24,9 @@ type AppRoutes =
 
 export const RoutePath: Record<AppRoutes, string> = {
     CURRENCIES: '/',
-    CURRENCY_DETAILS: '/', // + :id
-    USER: '/user',
-    PROFILE: '/user/', // + :id
+    CURRENCY_DETAILS: '/currency/', // + :id
+    PROFILE: '/profile',
+    USER: '/user/', // + :id
     PORTFOLIO: '/portfolio',
     WATCHLIST: '/watchlist',
     LOGIN: '/login',
@@ -42,12 +42,12 @@ export const RouteConfig: Record<AppRoutes, AppRoutesProps> = {
         path: `${RoutePath.CURRENCY_DETAILS}:id`,
         element: <CurrencyDetailsPage/>
     },
-    USER: {
-        path: RoutePath.USER,
+    PROFILE: {
+        path: RoutePath.PROFILE,
         element: <ProfilePage/>
     },
-    PROFILE: {
-        path: `${RoutePath.PROFILE}:id`,
+    USER: {
+        path: `${RoutePath.USER}:id`,
         element: <ProfilePage/>
     },
     PORTFOLIO: {

@@ -26,7 +26,7 @@ export const getNavigationList = createSelector(
                 title: 'Избранное'
             },
             {
-                path: RoutePath.USER,
+                path: RoutePath.PROFILE,
                 title: 'Профиль'
             }
         ];
@@ -35,7 +35,7 @@ export const getNavigationList = createSelector(
             NavigationList.pop()
             NavigationList.push(
                 {
-                    path: RoutePath.PROFILE + userData.id,
+                    path: RoutePath.USER + userData.id,
                     title: 'Профиль'
                 }
             );

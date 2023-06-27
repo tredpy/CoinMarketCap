@@ -49,7 +49,7 @@ export const ProfileHeader = memo((props: ProfileHeaderProps) => {
             {readOnly
                 ? (
                     <Button
-                        className={s.btn}
+                        className={s.edit}
                         view={'border'}
                         onClick={onEdit}
                     >
@@ -57,7 +57,7 @@ export const ProfileHeader = memo((props: ProfileHeaderProps) => {
                     </Button>
                 )
                 : (
-                    <>
+                    <div className={s.edit}>
                         <Button
                             className={s.btn}
                             view={'border_red'}
@@ -72,7 +72,7 @@ export const ProfileHeader = memo((props: ProfileHeaderProps) => {
                         >
                             {t('Сохранить')}
                         </Button>
-                    </>
+                    </div>
                 )}
         </div>
     );

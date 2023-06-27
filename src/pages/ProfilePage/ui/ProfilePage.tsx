@@ -100,6 +100,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
                             key={err}
                             view={'error'}
                             text={validateErrorTranslates[err]}
+                            className={s.error}
                         />
                     ))}
                     <ProfileCard

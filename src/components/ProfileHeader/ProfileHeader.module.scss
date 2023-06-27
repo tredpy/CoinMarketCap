@@ -1,9 +1,16 @@
 .ProfileHeader {
     display: flex;
     margin-bottom: 20px;
+}
 
-    .btn {
-        margin-left: auto;
-        margin-right: 10px;
-    }
+.edit {
+    margin-left: auto;
+}
+
+.btn {
+    margin-left: 10px;
+}
+
+.btn:first-child {
+    margin-left: 0;
 }
