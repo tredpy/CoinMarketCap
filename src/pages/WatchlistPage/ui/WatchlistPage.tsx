@@ -1,5 +1,10 @@
 import { memo, useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
+import { getUserAuthData } from 'store/User';
+
+import { PageWrapper } from 'components/PageWrapper/PageWrapper';
 
 import { classNames } from 'common/helpers/classNames/classNames';
 import { RoutePath } from 'common/routes/RouteConfig/RouteConfig';
@@ -18,14 +23,22 @@ interface WatchlistPageProps {
 const WatchlistPage = memo(({ className }: WatchlistPageProps) => {
     const { t } = useTranslation('watchlist');
 
+    const authData = useSelector(getUserAuthData)
+
     const navigate = useNavigate()
 
     const onLogin = useCallback(() => {
         navigate(RoutePath.LOGIN)
     }, [navigate])
 
+    if (authData) {
+        return (
+            <PageWrapper>Watchlist</PageWrapper>
+        )
+    }
+
     return (
-        <div
+        <PageWrapper
             data-testid="WatchlistPage"
             className={classNames(s.Watchlist, {}, [className])}
         >
@@ -72,7 +85,7 @@ const WatchlistPage = memo(({ className }: WatchlistPageProps) => {
                     </Button>
                 </div>
             </div>
-        </div>
+        </PageWrapper>
     );
 });
 

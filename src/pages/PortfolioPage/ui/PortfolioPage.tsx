@@ -1,5 +1,10 @@
 import { memo, useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
+import { getUserAuthData } from 'store/User';
+
+import { PageWrapper } from 'components/PageWrapper/PageWrapper';
 
 import { classNames } from 'common/helpers/classNames/classNames';
 import { RoutePath } from 'common/routes/RouteConfig/RouteConfig';
@@ -18,14 +23,22 @@ interface PortfolioPageProps {
 const PortfolioPage = memo(({ className }: PortfolioPageProps) => {
     const { t } = useTranslation('portfolio');
 
+    const authData = useSelector(getUserAuthData)
+
     const navigate = useNavigate()
 
     const onLogin = useCallback(() => {
         navigate(RoutePath.LOGIN)
     }, [navigate])
 
+    if (authData) {
+        return (
+            <PageWrapper>Portfolio</PageWrapper>
+        )
+    }
+
     return (
-        <div
+        <PageWrapper
             data-testid="PortfolioPage"
             className={classNames(s.Portfolio, {}, [className])}
         >
@@ -72,7 +85,7 @@ const PortfolioPage = memo(({ className }: PortfolioPageProps) => {
                     </Button>
                 </div>
             </div>
-        </div>
+        </PageWrapper>
     );
 });
 

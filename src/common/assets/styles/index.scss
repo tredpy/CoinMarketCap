@@ -3,6 +3,10 @@
 @import "themes/light";
 @import "themes/dark";
 
+html {
+    overflow: hidden;
+}
+
 .app {
     font: var(--font-m);
     background: var(--bg-light);
@@ -12,9 +16,4 @@
 
 .wrapper {
     display: flex;
-}
-
-.content {
-    flex-grow: 1;
-    padding: 2.5vw;
 }

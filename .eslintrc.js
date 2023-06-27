@@ -47,6 +47,7 @@ module.exports = {
         '@typescript-eslint/no-invalid-void-type': 'off',
         '@typescript-eslint/no-non-null-assertion': 'off',
         '@typescript-eslint/no-unnecessary-type-assertion': 'off',
-        'n/handle-callback-err': 'off'
+        'n/handle-callback-err': 'off',
+        'n/no-callback-literal': 'off'
     }
 }

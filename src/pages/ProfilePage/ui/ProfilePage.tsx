@@ -16,6 +16,7 @@ import {
 } from 'store/Profile';
 
 import { ProfileHeader } from 'components/ProfileHeader/ProfileHeader';
+import { PageWrapper } from 'components/PageWrapper/PageWrapper';
 import { ProfileCard } from 'components/ProfileCard/ProfileCard';
 
 import { DynamicModuleLoader, ReducersList } from 'common/utils/DynamicModuleLoader/DynamicModuleLoader';
@@ -90,7 +91,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
     if (authData) {
         return (
             <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-                <div
+                <PageWrapper
                     data-testid="ProfilePage"
                     className={classNames('', {}, [className])}
                 >
@@ -112,13 +113,13 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
                         onChangeUsername={onChangeUsername}
                         onChangeAvatar={onChangeAvatar}
                     />
-                </div>
+                </PageWrapper>
             </DynamicModuleLoader>
         );
     }
 
     return (
-        <div
+        <PageWrapper
             data-testid="ProfilePage"
             className={classNames(s.Profile, {}, [className])}
         >
@@ -165,7 +166,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
                     </Button>
                 </div>
             </div>
-        </div>
+        </PageWrapper>
     );
 });
 

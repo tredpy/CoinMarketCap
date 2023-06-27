@@ -4,6 +4,8 @@ import {
     fetchWatchlistCurrencies
 } from 'store/Currency/model/services/fetchWatchlistCurrencies/fetchWatchlistCurrencies';
 
+import { PageWrapper } from 'components/PageWrapper/PageWrapper';
+
 import { useInitialEffect } from 'common/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'common/hooks/useAppDispatch/useAppDispatch';
 
@@ -20,11 +22,11 @@ const CurrenciesPage = memo(() => {
     }, [])
 
     return (
-        <div
+        <PageWrapper
             data-testid="CurrenciesPage"
         >
             {t('Криптовалюты')}
-        </div>
+        </PageWrapper>
     );
 });
 

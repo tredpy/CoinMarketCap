@@ -3,11 +3,13 @@ import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
 
 import { UserSchema } from '../../User';
+import { Scroll } from '../../SaveScrollPosition';
 import { Login } from '../../LoginByUsername';
 import { ProfileSchema } from '../../Profile';
 
 export interface StateSchema {
     user: UserSchema
+    scroll: Scroll
     loginForm?: Login
     profile?: ProfileSchema
 }

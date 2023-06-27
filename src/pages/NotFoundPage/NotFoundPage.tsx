@@ -1,6 +1,8 @@
 import { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import { PageWrapper } from 'components/PageWrapper/PageWrapper';
+
 import { classNames } from 'common/helpers/classNames/classNames';
 import { RoutePath } from 'common/routes/RouteConfig/RouteConfig';
 
@@ -25,7 +27,7 @@ export const NotFoundPage = memo(({ className }: NotFoundPageProps) => {
     }
 
     return (
-        <div
+        <PageWrapper
             data-testid="NotFoundPage"
             className={classNames(s.NotFoundPage, {}, [className])}
         >
@@ -49,6 +51,6 @@ export const NotFoundPage = memo(({ className }: NotFoundPageProps) => {
             >
                 {t('Вернуться на Главную')}
             </Button>
-        </div>
+        </PageWrapper>
     );
 });

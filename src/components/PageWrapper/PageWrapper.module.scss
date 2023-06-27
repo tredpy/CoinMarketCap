@@ -1,6 +1,6 @@
-.Page {
+.PageWrapper {
     flex-grow: 1;
-    padding: 20px 20px 20px 45px;
+    padding: 2.5vw;
     height: calc(100vh - var(--header-height));
     overflow-y: auto;
     flex-shrink: 100;

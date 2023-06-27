@@ -24,10 +24,15 @@ export const getNavigationList = createSelector(
             {
                 path: RoutePath.WATCHLIST,
                 title: 'Избранное'
+            },
+            {
+                path: RoutePath.USER,
+                title: 'Профиль'
             }
         ];
 
         if (userData) {
+            NavigationList.pop()
             NavigationList.push(
                 {
                     path: RoutePath.PROFILE + userData.id,
