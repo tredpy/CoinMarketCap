@@ -92,7 +92,6 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
         return (
             <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
                 <PageWrapper
-                    data-testid="ProfilePage"
                     className={classNames('', {}, [className])}
                 >
                     <ProfileHeader/>
@@ -120,7 +119,6 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
 
     return (
         <PageWrapper
-            data-testid="ProfilePage"
             className={classNames(s.Profile, {}, [className])}
         >
             <div className={s.wrapper}>

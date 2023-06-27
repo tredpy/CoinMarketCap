@@ -14,7 +14,6 @@ const LoginPage = memo(() => {
 
     return (
         <PageWrapper
-            data-testid="LoginPage"
             className={s.LoginPage}
         >
             <Text text={t('Авторизация')} view={'light'} size={'L'}/>

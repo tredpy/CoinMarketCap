@@ -22,9 +22,7 @@ const CurrenciesPage = memo(() => {
     }, [])
 
     return (
-        <PageWrapper
-            data-testid="CurrenciesPage"
-        >
+        <PageWrapper>
             {t('Криптовалюты')}
         </PageWrapper>
     );

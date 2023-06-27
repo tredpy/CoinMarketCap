@@ -39,7 +39,6 @@ const WatchlistPage = memo(({ className }: WatchlistPageProps) => {
 
     return (
         <PageWrapper
-            data-testid="WatchlistPage"
             className={classNames(s.Watchlist, {}, [className])}
         >
             <div className={s.wrapper}>

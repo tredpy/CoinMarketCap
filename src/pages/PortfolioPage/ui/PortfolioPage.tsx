@@ -39,7 +39,6 @@ const PortfolioPage = memo(({ className }: PortfolioPageProps) => {
 
     return (
         <PageWrapper
-            data-testid="PortfolioPage"
             className={classNames(s.Portfolio, {}, [className])}
         >
             <div className={s.wrapper}>

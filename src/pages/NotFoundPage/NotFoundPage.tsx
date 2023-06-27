@@ -28,7 +28,6 @@ export const NotFoundPage = memo(({ className }: NotFoundPageProps) => {
 
     return (
         <PageWrapper
-            data-testid="NotFoundPage"
             className={classNames(s.NotFoundPage, {}, [className])}
         >
             <Text
