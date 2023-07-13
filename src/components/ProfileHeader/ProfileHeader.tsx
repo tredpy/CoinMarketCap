@@ -29,6 +29,7 @@ export const ProfileHeader = memo((props: ProfileHeaderProps) => {
     const { t } = useTranslation('profile');
 
     const readOnly = useSelector(getProfileReadOnly);
+
     const dispatch = useAppDispatch();
 
     const onEdit = useCallback(() => {

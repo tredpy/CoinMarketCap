@@ -24,7 +24,9 @@ export const PageWrapper = memo((props: PageProps) => {
 
     const wrapperRef = useRef() as MutableRefObject<HTMLDivElement>;
     const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
+
     const dispatch = useAppDispatch();
+
     const { pathname } = useLocation();
 
     const scrollPosition = useSelector(

@@ -16,8 +16,8 @@ import {
 } from 'store/Profile';
 
 import { ProfileHeader } from 'components/ProfileHeader/ProfileHeader';
-import { PageWrapper } from 'components/PageWrapper/PageWrapper';
 import { ProfileCard } from 'components/ProfileCard/ProfileCard';
+import { PageWrapper } from 'components/PageWrapper/PageWrapper';
 
 import { DynamicModuleLoader, ReducersList } from 'common/utils/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from 'common/hooks/useInitialEffect/useInitialEffect';

@@ -1,6 +1,6 @@
 import { memo, useCallback, useMemo } from 'react';
-import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import { getUserAuthData, userActions } from 'store/User';
 
