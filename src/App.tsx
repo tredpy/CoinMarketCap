@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 
 import { getUserInitiated, userActions } from 'store/User';
 
-import { AppRouter } from 'common/routes/AppRouter/AppRouter';
-import { classNames } from 'common/helpers/classNames/classNames';
 import { useAppDispatch } from 'common/hooks/useAppDispatch/useAppDispatch';
 import { useTheme } from 'common/hooks/useTheme/useTheme';
+import { classNames } from 'common/helpers/classNames/classNames';
+import { AppRouter } from 'common/routes/AppRouter/AppRouter';
 
 import { PageLoader } from 'components/PageLoader/PageLoader';
 import { SideBar } from 'components/SideBar/SideBar';
