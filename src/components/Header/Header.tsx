@@ -4,8 +4,8 @@ import { useSelector } from 'react-redux';
 
 import { getUserAuthData, userActions } from 'store/User';
 
-import { getNavigationList } from 'common/routes/NavigationList/NavigationList';
 import { RoutePath } from 'common/routes/RouteConfig/RouteConfig';
+import { getNavigationList } from 'common/routes/NavigationList/NavigationList';
 import { useAppDispatch } from 'common/hooks/useAppDispatch/useAppDispatch';
 import { classNames } from 'common/helpers/classNames/classNames';
 
