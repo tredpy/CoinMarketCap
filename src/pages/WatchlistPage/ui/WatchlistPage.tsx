@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 
 import { getUserAuthData } from 'store/User';
 
-import { PageWrapper } from 'components/PageWrapper/PageWrapper';
-
 import { classNames } from 'common/helpers/classNames/classNames';
+
+import { PageWrapper } from 'components/PageWrapper/PageWrapper';
 import { RoutePath } from 'common/routes/RouteConfig/RouteConfig';
 
 import { Button } from 'ui/Button/Button';
